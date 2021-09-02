@@ -1,19 +1,17 @@
 <template>
-  <div id="app">
-	<HelloWorld />
-    <router-view/>
-  </div>
+	<div id="app">
+		<HelloWorld />
+		<router-view />
+	</div>
 </template>
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  components: {
-    HelloWorld,
-  },
-
-
-}
+	components: {
+		HelloWorld
+	}
+};
 </script>
 <style>
 body {
@@ -38,5 +36,6 @@ html {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0px 150px;
+	overflow: hidden;
 }
 </style>

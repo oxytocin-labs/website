@@ -14,14 +14,14 @@
 					millions of users backed by the principles of simplicity,
 					performance, and security.
 				</span>
-		<vs-button border size="xl" class="landing-section-text-btn">Get in Touch</vs-button>
+				<vs-button border size="xl" class="landing-section-text-btn"
+					>Get in Touch</vs-button
+				>
 			</div>
 		</div>
-		<img
-			src="https://loka.com/images/hero-3.png"
-			alt=""
-			class="landing-section-image"
-		/>
+		<div class="landing-section-image-container">
+			<img src="https://loka.com/images/hero-3.png" alt="" />
+		</div>
 	</div>
 </template>
 
@@ -45,30 +45,39 @@ export default {};
 	width: 650px;
 	box-sizing: border-box;
 	position: relative;
-	top:-8%;
-	margin-left: 150px;
+	top: -8%;
+	margin-left: 8%;
 	z-index: 1;
 }
 .landing-section-text-title {
 	color: white;
-	font-size: 64px;
+	font-size: 48px;
 	text-align: left;
 	height: max-content;
 	margin-bottom: 50px;
 	font-weight: 700;
 }
 .landing-section-text-para {
-		color: white;
+	color: white;
 	text-align: left;
-	font-size: 24px;
+	font-size: 32px;
 	margin: 0px;
 }
-.landing-section-image {
-	right: 10%;
+.landing-section-image-container {
+	height: 80%;
+	width: 60%;
+	left: 30%;
 	z-index: -1;
 	position: absolute;
+	overflow: hidden;
 }
-.landing-section-text-btn{
+
+.landing-section-image-container img {
+	height: 100%;
+	aspect-ratio: 1.7;
+}
+
+.landing-section-text-btn {
 	position: absolute !important;
 	left: 0;
 	top: calc(100% + 30px);
