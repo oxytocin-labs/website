@@ -1,36 +1,29 @@
 <template>
-	<div class="navbar-container">
-		<div class="navbar">
-			<div class="navbar-logo">
-				<img
-					src="../../public/logo.svg"
-					alt="--logo--"
-					class="navbar-logo-image"
-				/>
-			</div>
-			<!-- <div class="navbar-content">
-				<div class="navbar-content-work navbar-content-item">
-					<vs-button
-						:active="active == 1"
-						@click="active = !active"
-						transparent
-						size="l"
-						dark
-					>
-						Work
-					</vs-button>
-				</div>
-				<div class="nabar-content-team navbar-content-item">
-					<vs-button transparent size="l" dark> Team </vs-button>
-				</div>
-				<div class="navbar-content-get-in-touch navbar-content-item">
-					<vs-button transparent size="l" dark>
-						Get in Touch
-					</vs-button>
-				</div>
-			</div> -->
-			<vs-card>
-				<vs-button shadow> <template #title>Hello World</template> </vs-button>
+	<div class="navbar">
+		<div class="navbar-logo">
+			<img
+				src="../../public/logo.svg"
+				alt="--logo--"
+				class="navbar-logo-image"
+			/>
+		</div>
+		<div>
+			<vs-card type="3" class="nav-actions-card">
+				<template #text>
+					<div class="nav-actions">
+						<!-- <vs-button-group> -->
+						<vs-button
+							transparent
+							dark
+							style="margin: 0px"
+							size="large"
+							v-for="(button, idx) in buttons"
+							:key="idx"
+							>{{ button.label }}</vs-button
+						>
+						<!-- </vs-button-group> -->
+					</div>
+				</template>
 			</vs-card>
 		</div>
 	</div>
@@ -40,11 +33,17 @@
 export default {
 	name: "HelloWorld",
 	props: {
-		msg: String,
+		msg: String
 	},
 	data: () => ({
 		active: 0,
-	}),
+		buttons: [
+			{ label: "Portfolio", action: null },
+			{ label: "Services", action: null },
+			{ label: "Contact", action: null },
+			{ label: "About", action: null }
+		]
+	})
 };
 </script>
 
@@ -55,19 +54,13 @@ export default {
 
 .navbar {
 	display: flex;
+	position: fixed;
+	width: 100%;
 	justify-content: space-between;
-	padding: 0px 150px;
+	box-sizing: border-box;
+	padding: 60px 150px 0px 150px;
 }
 
-.navbar-content {
-	display: grid;
-	place-items: center;
-	max-height: 40px;
-	border-radius: 40px;
-	background-color: #98a4be;
-	display: flex;
-	justify-content: space-between;
-}
 .navbar-logo-image {
 	align-items: center;
 	max-height: 3rem;
@@ -77,11 +70,12 @@ export default {
 	display: grid;
 	place-items: center;
 }
-.navbar-content-item {
-	padding: 1rem 0rem 0.75rem 0rem;
+.nav-actions {
+	display: flex;
+	margin: -10px;
 }
-.navbar-content.btn {
-	font-size: 3rem;
-	color: rgb(133, 62, 62);
-}
+
+/* .nav-actions-card > * > vs-card__text {
+	border: red 2px solid;
+} */
 </style>
