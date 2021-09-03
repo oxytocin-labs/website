@@ -3,7 +3,6 @@
 		<div class="navbar-logo">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-
 				viewBox="0 0 2000 2000"
 				class="navbar-logo-image"
 			>
@@ -63,21 +62,24 @@ export default {
 	display: flex;
 	position: fixed;
 	width: 100%;
+	max-width: 1440px;
 	justify-content: space-between;
 	box-sizing: border-box;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	top: 0;
 	padding: 60px 150px 0px 150px;
 	align-items: center;
-	z-index: 100;
+	z-index: 10;
 }
 
 .navbar-logo-image {
+	position: relative;
 	align-items: center;
 	max-height: 3rem;
 	padding: 0.5rem 0.75rem;
-	height: 50px;
-	width: 50px;
+	height: 62px;
+	width: 62px;
 	stroke: white;
 	fill: white;
 }
@@ -90,6 +92,9 @@ export default {
 	margin: -10px;
 }
 
+.nav-actions-card {
+	position: relative;
+}
 /* .nav-actions-card > * > vs-card__text {
 	border: red 2px solid;
 } */

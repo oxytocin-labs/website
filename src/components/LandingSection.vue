@@ -18,9 +18,9 @@
 					>Get in Touch</vs-button
 				>
 			</div>
-		</div>
-		<div class="landing-section-image-container">
-			<img src="https://loka.com/images/hero-3.png" alt="" />
+			<div class="landing-section-image-container">
+				<img src="https://loka.com/images/hero-3.png" alt="" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -33,9 +33,9 @@ export default {};
 .landing-section-container {
 	display: grid;
 	box-sizing: border-box;
-	padding-top: 100px;
 	grid-template-rows: 100%;
-	height: 100%;
+	min-height: 728px;
+	height: 100vh;
 	align-items: center;
 	grid-template-columns: auto;
 	position: relative;
@@ -45,13 +45,15 @@ export default {};
 	width: 650px;
 	box-sizing: border-box;
 	position: relative;
-	top: -8%;
-	margin-left: 8%;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-100%);
+	margin-left: 0%;
 	z-index: 1;
 }
 .landing-section-text-title {
 	color: white;
-	font-size: 48px;
+	font-size: 56px;
 	text-align: left;
 	height: max-content;
 	margin-bottom: 50px;
@@ -60,20 +62,22 @@ export default {};
 .landing-section-text-para {
 	color: white;
 	text-align: left;
-	font-size: 32px;
+	font-size: 24px;
 	margin: 0px;
 }
 .landing-section-image-container {
-	height: 80%;
-	width: 60%;
-	left: 30%;
-	z-index: -1;
+	height: 600px;
+	left: 45%;
+	width: 1000px;
+	top: -100px;
+	z-index: -10;
 	position: absolute;
 	overflow: hidden;
 }
 
 .landing-section-image-container img {
-	height: 100%;
+	/* height: 100%; */
+	max-height: 600px;
 	aspect-ratio: 1.7;
 }
 

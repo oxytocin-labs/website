@@ -9,8 +9,8 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
 	components: {
-		HelloWorld
-	}
+		HelloWorld,
+	},
 };
 </script>
 <style>
@@ -22,8 +22,7 @@ body {
 
 html {
 	background-color: #21242b;
-	height: 100%;
-	/* max-width: 1440px; */
+	max-width: 1440px;
 	margin: 0px auto;
 }
 #app {
@@ -35,7 +34,6 @@ html {
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0px 150px;
-	overflow: hidden;
+	/* overflow-x: hidden; */
 }
 </style>
