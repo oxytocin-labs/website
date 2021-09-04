@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import LandingSection from "@/components/LandingSection.vue";
-import WorkSection from "../components/WorkSection.vue";
 import ClientsAndTestimonialSection from "../components/ClientsAndTestimonialSection.vue";
+import LandingSection from "../components/LandingSection.vue";
+import WorkSection from "../components/WorkSection.vue";
 
 export default {
 	name: "Home",
@@ -20,7 +20,7 @@ export default {
 	},
 };
 </script>
-<style >
+<style>
 .home {
 	width: 100%;
 	height: 100%;

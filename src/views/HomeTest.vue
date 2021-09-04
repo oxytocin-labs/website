@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import LandingSection from "@/components/LandingSection.vue";
-import WorkSection from "../components/WorkSection.vue";
 import ClientsAndTestimonialSection from "../components/ClientsAndTestimonialSection.vue";
 import ContactSection from "../components/ContactSection.vue";
+import LandingSection from "../components/LandingSection.vue";
+import WorkSection from "../components/WorkSection.vue";
 
 export default {
 	name: "HomeTest",
@@ -23,7 +23,7 @@ export default {
 	},
 };
 </script>
-<style >
+<style>
 .homeTest {
 	width: 100%;
 	height: 100%;

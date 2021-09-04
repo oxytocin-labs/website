@@ -1,0 +1,38 @@
+extends:
+    - plugin:vue/essential
+    - plugin:import/errors
+    - plugin:import/warnings
+    - plugin:prettier/recommended
+parserOptions:
+    ecmaFeatures:
+        jsx: true
+    ecmaVersion: 12
+    sourceType: module
+plugins:
+    - prettier
+    - import
+settings:
+    import/resolver:
+        node:
+            extensions: [".js", ".jsx", ".ts", ".tsx"]
+            moduleDirectory: ["node_modules", "src/"]
+rules:
+    import/order:
+        - warn
+        - groups:
+              - builtin
+              - external
+              - internal
+              - - parent
+                - sibling
+          pathGroups:
+              - pattern: react
+                group: external
+                position: before
+          pathGroupsExcludedImportTypes:
+              - builtin
+          newlines-between: always
+          alphabetize:
+              order: asc
+              caseInsensitive: true
+    prettier/prettier: warn
