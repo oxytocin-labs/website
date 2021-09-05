@@ -62,6 +62,7 @@
 					</div>
 				</div>
 				<div class="card-pocket"></div>
+				<div class="card-pocket-embroidery"></div>
 				<div class="card-pocket-shadow"></div>
 			</div>
 		</div>
@@ -137,6 +138,7 @@ export default {
 }
 .clients-section-card-container {
 	display: grid;
+	place-items: center;
 	grid-template-columns: auto auto auto;
 	padding: 0px 30px;
 }
@@ -206,14 +208,14 @@ export default {
 }
 
 @keyframes rev-flip {
-	1% {
+	0% {
 		z-index: 10;
 		transform: translateY(-100%) rotateX(180deg) rotateZ(5deg);
 		animation-timing-function: linear;
 	}
 
 	40% {
-		z-index: 10;
+		z-index: 0;
 		transform: translateY(-80%) rotateZ(5deg);
 	}
 	50% {
@@ -240,8 +242,19 @@ export default {
 	background-color: #21242b;
 	transform: translateX(-50%);
 	bottom: -10%;
-	border-top: 2px solid #5058689f;
+	border-top: 2px solid #a1a1a19f;
 	z-index: 2;
+}
+
+.card-pocket-embroidery {
+	width: 110%;
+	height: 78%;
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	bottom: -10%;
+	z-index: 3;
+	border-top: 2px dashed #3d43509f;
 }
 
 .card-pocket-shadow {
