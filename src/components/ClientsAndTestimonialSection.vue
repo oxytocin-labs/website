@@ -101,10 +101,16 @@ export default {
 			e.target.style.animation = "flip 1.5s linear forwards";
 		},
 		flipBack(e) {
-			e.target.style.transformOrigin = "50% 95%";
-			setTimeout(() => {
-				e.target.style.animation = "rev-flip 1.5s linear forwards";
-			}, 1500);
+			console.log(e.target.style.animation);
+			if (
+				e.target.style.animation ===
+				"1.5s linear 0s 1 normal forwards running flip"
+			) {
+				e.target.style.transformOrigin = "50% 95%";
+				setTimeout(() => {
+					e.target.style.animation = "rev-flip 1.5s linear forwards";
+				}, 1500);
+			}
 		},
 	},
 };
