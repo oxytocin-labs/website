@@ -15,11 +15,7 @@
 				:key="card.id"
 				class="client-section-card"
 			>
-				<div
-					class="main-card"
-					@mouseenter="flip"
-					@mouseleave="flipBack"
-				>
+				<div class="main-card" @click="flip" @mouseleave="flipBack">
 					<div class="card-backside">
 						<vs-card>
 							<template #title>
@@ -156,6 +152,17 @@ export default {
 	position: relative;
 	height: max-content;
 	width: max-content;
+}
+
+.main-card:hover {
+	transform: translateY(-10%);
+}
+.main-card:active {
+	transform: translateY(0px);
+}
+
+.main-card > * {
+	pointer-events: none;
 }
 
 .card-backside {
