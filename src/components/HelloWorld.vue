@@ -25,6 +25,7 @@
 							size="large"
 							v-for="(button, idx) in buttons"
 							:key="idx"
+							@click="button.click"
 							>{{ button.label }}</vs-button
 						>
 						<!-- </vs-button-group> -->
@@ -44,10 +45,38 @@ export default {
 	data: () => ({
 		active: 0,
 		buttons: [
-			{ label: "Portfolio", action: null },
-			{ label: "Services", action: null },
-			{ label: "Contact", action: null },
-			{ label: "About", action: null },
+			{
+				label: "Portfolio",
+				action: null,
+				click: () => {
+					let ele = document.getElementById("portfolio");
+					ele.scrollIntoView({ behavior: "smooth" });
+				},
+			},
+			{
+				label: "Services",
+				action: null,
+				click: () => {
+					let ele = document.getElementById("contact");
+					ele.scrollIntoView;
+				},
+			},
+			{
+				label: "Contact",
+				action: null,
+				click: () => {
+					let ele = document.getElementById("contact");
+					ele.scrollIntoView;
+				},
+			},
+			{
+				label: "About",
+				action: null,
+				click: () => {
+					let ele = document.getElementById("contact");
+					ele.scrollIntoView({ behavior: "smooth" });
+				},
+			},
 		],
 	}),
 };

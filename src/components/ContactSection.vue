@@ -1,37 +1,44 @@
 <template>
-	<div class="contact-section">
-		<div class="contact-section-text">
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-				modi corporis facilis delectus libero optio recusandae quos
-				voluptas architecto magnam eos atque, quia accusantium vero
-				pariatur distinctio. Et, culpa quisquam.
-			</p>
-		</div>
-		<div class="contact-section-form">
-			<div class="contact-section-form-items">
-				<div
-					style="height: max-content; width: 100%"
-					class="contact-section-form-items-text"
-				>
-					Hi, my name is
+	<div id="contact" class="contact-section-container">
+		<div class="contact-section">
+			<div class="contact-section-text">
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					Quasi modi corporis facilis delectus libero optio recusandae
+					quos voluptas architecto magnam eos atque, quia accusantium
+					vero pariatur distinctio. Et, culpa quisquam.
+				</p>
+			</div>
+			<div class="contact-section-form">
+				<div class="contact-section-form-items">
+					<div class="contact-section-form-items-text">
+						Hi, my name is
+						<div
+							contenteditable="true"
+							placeholder="name"
+							class="contact-section-form-items-text-input"
+							@blur="changeName"
+							@keypress="keypress"
+						/>
+						and my email address is
+						<div
+							contenteditable="true"
+							placeholder="email"
+							class="contact-section-form-items-text-input"
+							@blur="changeEmail"
+						/>
+						.
+					</div>
 					<div
-						contenteditable="true"
-						placeholder="name"
-						class="contact-section-form-items-text-input"
-						@blur="changeName"
-						@keypress="keypress"
-					/>
-					and my email address is <br />
-					<div
-						contenteditable="true"
-						placeholder="email"
-						class="contact-section-form-items-text-input"
-						@blur="changeEmail"
-					/>
-					.
+						style="
+							display: grid;
+							place-items: center;
+							margin-top: 32px;
+						"
+					>
+						<vs-button shadow size="large">Get in Touch</vs-button>
+					</div>
 				</div>
-				<vs-button border size="large">Get in Touch</vs-button>
 			</div>
 		</div>
 	</div>
@@ -59,23 +66,32 @@ export default {
 </script>
 
 <style>
-.contact-section {
+.contact-section-container {
+	display: grid;
+	place-items: center;
 	height: 100vh;
-	width: 100%;
+	max-width: 100%;
+}
+.contact-section {
+	height: max-content;
+	width: 80vw;
 	color: white;
 	display: flex;
 	flex-direction: column;
 	grid-template-rows: auto auto;
 	box-sizing: border-box;
 	padding: 50px;
+	max-width: 80vw;
 }
 .contact-section-text {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	box-sizing: border-box;
 	padding: 30px 150px 30px 80px;
 	font-size: 28px;
 	text-align: left;
+	padding: 30px 220px;
 }
 .contact-section-form {
 	display: flex;
@@ -87,11 +103,19 @@ export default {
 	line-height: 2;
 	text-align: left;
 	place-items: center;
+	max-width: 80vw;
 }
 .contact-section-form-items {
 	display: flex;
 	flex-direction: column;
-	max-width: 90vw;
+	max-width: 80vw;
+	width: 100%;
+}
+
+.contact-section-form-items-text {
+	align-self: center;
+	height: max-content;
+	width: fit-content;
 }
 
 .contact-section-form-items-text-input {
@@ -102,8 +126,10 @@ export default {
 	padding: 0px;
 	margin: 0px;
 	width: max-content;
-	max-width: 60vw;
+	max-width: 50vw;
 	display: inline-block;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 [contenteditable="true"]:empty:before {

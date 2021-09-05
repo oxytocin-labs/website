@@ -1,5 +1,5 @@
 <template>
-	<div class="landing-section-container">
+	<div id="portfolio" class="landing-section-container">
 		<div class="landing-section-text-container">
 			<div class="landing-section-text-title">
 				<span
