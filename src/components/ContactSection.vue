@@ -11,38 +11,27 @@
 		<div class="contact-section-form">
 			<div class="contact-section-form-items">
 				<div
-					style="height: max-content; width: max-content"
+					style="height: max-content; width: 100%"
 					class="contact-section-form-items-text"
 				>
-					Hi, my name is &nbsp;
-					<!-- <v-text-field
-						dark
-						single-line
-						class="contact-section-form-items-text-name"
-					></v-text-field
-					>&nbsp;and my email address is &nbsp;<br /> -->
-					<input
-						v-model="name"
-						type="text"
-						class="contact-section-form-items-text-name"
-						:style="{
-							width:
-								name.length !== 0
-									? `${(name.length - 4) * 32}px`
-									: `${4 * 32}px`,
-						}"
+					Hi, my name is
+					<div
+						contenteditable="true"
+						placeholder="name"
+						class="contact-section-form-items-text-input"
+						@blur="changeName"
+						@keypress="keypress"
 					/>
-					<v-text-field
-						type="email"
-						dark
-						single-line
-						class="contact-section-form-items-text-email"
-					></v-text-field
-					>&nbsp;.
+					and my email address is <br />
+					<div
+						contenteditable="true"
+						placeholder="email"
+						class="contact-section-form-items-text-input"
+						@blur="changeEmail"
+					/>
+					.
 				</div>
-				<div>
-					<vs-button border size="large">Get in Touch</vs-button>
-				</div>
+				<vs-button border size="large">Get in Touch</vs-button>
 			</div>
 		</div>
 	</div>
@@ -52,7 +41,20 @@
 export default {
 	data: () => ({
 		name: "",
+		email: "",
 	}),
+	methods: {
+		changeName(e) {
+			this.name = e.target.innerHTML;
+		},
+		changeEmail(e) {
+			this.email = e.target.innerHTML;
+		},
+		keypress(e) {
+			console.log(e.which);
+			if (e.which === 13) e.preventDefault();
+		},
+	},
 };
 </script>
 
@@ -61,8 +63,9 @@ export default {
 	height: 100vh;
 	width: 100%;
 	color: white;
-	display: grid;
-	grid-template-rows: 20% 50%;
+	display: flex;
+	flex-direction: column;
+	grid-template-rows: auto auto;
 	box-sizing: border-box;
 	padding: 50px;
 }
@@ -83,20 +86,29 @@ export default {
 	font-size: 32px;
 	line-height: 2;
 	text-align: left;
-	place-items: initial;
+	place-items: center;
 }
 .contact-section-form-items {
 	display: flex;
 	flex-direction: column;
+	max-width: 90vw;
 }
-.contact-section-form-items-text {
-	display: flex;
-	flex-wrap: wrap;
-}
-.contact-section-form-items-text-name {
-	font-size: 32px;
-	border-bottom: white 1px solid;
+
+.contact-section-form-items-text-input {
+	font-size: 30px;
+	/* border-bottom: white 1px solid; */
 	color: white;
-	padding-bottom: 0px;
+	outline: none;
+	padding: 0px;
+	margin: 0px;
+	width: max-content;
+	max-width: 60vw;
+	display: inline-block;
+}
+
+[contenteditable="true"]:empty:before {
+	content: attr(placeholder);
+	filter: brightness(0.6);
+	pointer-events: none;
 }
 </style>
