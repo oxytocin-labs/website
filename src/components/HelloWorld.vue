@@ -32,11 +32,21 @@
 			</vs-card>
 		</div>
 		<div class="nav-button">
-			<vs-button transparent @click="openMenu = !openMenu">
-				<v-btn fab small>
-					<v-icon>mdi-menu</v-icon>
-				</v-btn>
+			<vs-button
+				transparent
+				class="nav-button-icon"
+				@click="openMenu = !openMenu"
+			>
+				<div>
+					<v-btn v-if="!openMenu" fab small>
+						<v-icon>mdi-menu</v-icon>
+					</v-btn>
+					<v-btn v-if="openMenu" fab small>
+						<v-icon>mdi-window-close</v-icon>
+					</v-btn>
+				</div>
 			</vs-button>
+
 			<transition name="slide">
 				<div v-if="openMenu" class="nav-menu">
 					<vs-card type="3" class="nav-actions-card">
@@ -171,6 +181,11 @@ export default {
 .slide-leave-to {
 	transform: translateX(100%);
 	opacity: 0;
+}
+
+.nav-button-icon:active div {
+	transition: all 300ms;
+	transform: scaleY(0.7) scaleX(1.2);
 }
 
 @media screen and (max-width: 1300px) {
