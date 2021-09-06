@@ -13,11 +13,10 @@
 				</g>
 			</svg>
 		</div>
-		<div>
+		<div class="nav-actions-card-container">
 			<vs-card type="3" class="nav-actions-card">
 				<template #text>
 					<div class="nav-actions">
-						<!-- <vs-button-group> -->
 						<vs-button
 							transparent
 							dark
@@ -28,10 +27,36 @@
 							@click="button.click"
 							>{{ button.label }}</vs-button
 						>
-						<!-- </vs-button-group> -->
 					</div>
 				</template>
 			</vs-card>
+		</div>
+		<div class="nav-button">
+			<vs-button transparent @click="openMenu = !openMenu">
+				<v-btn fab small>
+					<v-icon>mdi-menu</v-icon>
+				</v-btn>
+			</vs-button>
+			<transition name="slide">
+				<div v-if="openMenu" class="nav-menu">
+					<vs-card type="3" class="nav-actions-card">
+						<template #text>
+							<div class="nav-actions">
+								<vs-button
+									transparent
+									dark
+									style="margin: 0px"
+									size="large"
+									v-for="(button, idx) in buttons"
+									:key="idx"
+									@click="button.click"
+									>{{ button.label }}</vs-button
+								>
+							</div>
+						</template>
+					</vs-card>
+				</div>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -43,7 +68,7 @@ export default {
 		msg: String,
 	},
 	data: () => ({
-		active: 0,
+		openMenu: false,
 		buttons: [
 			{
 				label: "Portfolio",
@@ -66,14 +91,14 @@ export default {
 				action: null,
 				click: () => {
 					let ele = document.getElementById("contact");
-					ele.scrollIntoView;
+					ele.scrollIntoView({ behavior: "smooth" });
 				},
 			},
 			{
 				label: "About",
 				action: null,
 				click: () => {
-					let ele = document.getElementById("contact");
+					let ele = document.getElementById("about");
 					ele.scrollIntoView({ behavior: "smooth" });
 				},
 			},
@@ -124,7 +149,44 @@ export default {
 .nav-actions-card {
 	position: relative;
 }
-/* .nav-actions-card > * > vs-card__text {
-	border: red 2px solid;
-} */
+.nav-button {
+	display: none;
+	width: max-content;
+}
+.nav-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 12px;
+	/* transform: translateX(-50%); */
+	/* right: 0%; */
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: 300ms ease-out;
+}
+
+.slide-enter,
+.slide-leave-to {
+	transform: translateX(100%);
+	opacity: 0;
+}
+
+@media screen and (max-width: 1300px) {
+	.nav-menu {
+		display: block;
+	}
+	.navbar {
+		justify-content: space-between;
+		padding: 0px;
+	}
+	.nav-actions-card-container {
+		display: none;
+	}
+
+	.nav-button {
+		display: block;
+	}
+}
 </style>

@@ -33,11 +33,12 @@ export default {};
 .landing-section-container {
 	display: grid;
 	box-sizing: border-box;
-	grid-template-rows: 100%;
+
 	min-height: 728px;
 	height: 100vh;
+	width: 100%;
 	align-items: center;
-	grid-template-columns: auto;
+
 	position: relative;
 }
 .landing-section-text-container {
@@ -85,5 +86,40 @@ export default {};
 	position: absolute !important;
 	left: 0;
 	top: calc(100% + 30px);
+}
+@media screen and (max-width: 1300px) {
+	.landing-section-image-container {
+		display: none;
+	}
+
+	.landing-section-text-container {
+		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
+		padding: 24px;
+	}
+
+	.landing-section-text-para {
+		width: 60vw;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.landing-section-text-container * {
+		text-align: center;
+	}
+
+	.landing-section-text-btn {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.landing-section-text-title {
+		font-size: 32px;
+	}
+	.landing-section-text-para {
+		font-size: 16px;
+	}
 }
 </style>

@@ -151,7 +151,7 @@ export default {
 	justify-content: right;
 	overflow: hidden;
 	border-radius: 14px;
-	box-shadow: inset 0px 0px 20px 7px rgb(0 0 0 / 20%);
+	box-shadow: inset 20px 0px 20px 7px rgb(0 0 0 / 20%);
 }
 
 .work-section-carousel {
@@ -213,6 +213,37 @@ export default {
 @keyframes slick {
 	100% {
 		transform: translateX(-50%);
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.work-section {
+		width: 100%;
+		height: max-content;
+	}
+	.work-section-text-container {
+		border-radius: 0px;
+	}
+
+	.work-section-text-title {
+		font-size: 32px;
+	}
+	.work-section-text-para {
+		font-size: 16px;
+	}
+
+	.work-section-card {
+		border-radius: 0px;
+		display: grid;
+		height: max-content;
+		width: 100%;
+		align-items: center;
+		background-color: #f2f2f2;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+	}
+	.right-panel {
+		border-radius: 0px;
 	}
 }
 </style>

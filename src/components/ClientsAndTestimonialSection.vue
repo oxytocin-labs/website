@@ -15,7 +15,11 @@
 				:key="card.id"
 				class="client-section-card"
 			>
-				<div class="main-card" @click="flip" @mouseleave="flipBack">
+				<div
+					class="main-card"
+					@mouseenter="flip"
+					@mouseleave="flipBack"
+				>
 					<div class="card-backside">
 						<vs-card>
 							<template #title>
@@ -51,6 +55,7 @@
 								padding-top: 20%;
 								font-weight: bold;
 								font-size: x-large;
+								text-align: center;
 							"
 						>
 							{{ card.title }}
@@ -97,7 +102,7 @@ export default {
 	}),
 	methods: {
 		flip(e) {
-			e.target.style.transformOrigin = "50% 95%";
+			e.target.style.animation = null;
 			e.target.style.animation = "flip 1.5s linear forwards";
 		},
 		flipBack(e) {
@@ -105,7 +110,6 @@ export default {
 				e.target.style.animation ===
 				"1.5s linear 0s 1 normal forwards running flip"
 			) {
-				e.target.style.transformOrigin = "50% 95%";
 				setTimeout(() => {
 					e.target.style.animation = "rev-flip 1.5s linear forwards";
 					setTimeout(() => {
@@ -125,8 +129,11 @@ export default {
 	box-sizing: border-box;
 	padding: 50px 30px 0px 30px;
 	display: grid;
-	grid-template-rows: 40% 60%;
 }
+.clients-section-text {
+	width: 100%;
+}
+
 .clients-section-text-title {
 	padding: 20px;
 	padding-bottom: 10px;
@@ -141,9 +148,11 @@ export default {
 	color: #a2a8b0;
 }
 .clients-section-card-container {
-	display: grid;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	box-sizing: border-box;
 	place-items: center;
-	grid-template-columns: auto auto auto;
 	padding: 0px 30px;
 }
 .client-section-card {
@@ -160,6 +169,7 @@ export default {
 	position: relative;
 	height: max-content;
 	width: max-content;
+	transform-origin: 50% 95%;
 }
 
 .main-card:hover {
@@ -195,7 +205,7 @@ export default {
 	backface-visibility: hidden;
 }
 
-@keyframes flip {
+/* @keyframes flip-v0 {
 	1% {
 		animation-timing-function: ease-in;
 	}
@@ -222,7 +232,7 @@ export default {
 	}
 }
 
-@keyframes rev-flip {
+@keyframes rev-flip-v0 {
 	0% {
 		z-index: 10;
 		transform: translateY(-100%) rotateX(180deg) rotateZ(5deg);
@@ -244,6 +254,57 @@ export default {
 		transform: translateY(-50%) translateZ(100px);
 		animation-timing-function: ease-in-out;
 	}
+	100% {
+		animation-timing-function: ease-in;
+	}
+} */
+
+@keyframes flip {
+	1% {
+		animation-timing-function: ease-in;
+	}
+	20% {
+		transform: translateY(-50%);
+		animation-timing-function: ease-in-out;
+	}
+	25% {
+		transform: translateY(-50%) translateZ(100px) rotateX(0deg);
+		z-index: 0;
+	}
+	50% {
+		z-index: 10;
+		transform: translateY(-80%) rotateX(180deg);
+		animation-timing-function: cubic-bezier(0.47, 0.52, 0.13, 1.7);
+	}
+	80% {
+		transform: translateY(-100%) rotateX(180deg);
+	}
+	100% {
+		z-index: 10;
+		transform: translateY(-100%) rotateX(180deg);
+	}
+}
+
+@keyframes rev-flip {
+	0% {
+		z-index: 10;
+		transform: translateY(-100%) rotateX(180deg);
+		animation-timing-function: linear;
+	}
+
+	40% {
+		z-index: 0;
+		transform: translateY(-80%);
+	}
+	50% {
+		transform: translateY(-50%) rotateX(0deg);
+		z-index: 0;
+		animation-timing-function: cubic-bezier(0.47, 0.52, 0.13, 1.7);
+	}
+
+	/* 80% {
+		transform: translateY(-50%);
+	} */
 	100% {
 		animation-timing-function: ease-in;
 	}
@@ -281,5 +342,68 @@ export default {
 	height: 55%;
 	z-index: 1;
 	box-shadow: 0px -20px 20px 0px #0000008c;
+}
+
+@media screen and (max-width: 1300px) {
+	.card-pocket,
+	.card-pocket-shadow,
+	.card-pocket-embroidery {
+		display: none;
+	}
+
+	.clients-section-card-container {
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+	}
+
+	.clients-section-text-title {
+		text-align: center;
+		font-size: 32px;
+	}
+
+	.clients-section-text-para {
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.main-card {
+		transform-origin: 50% 50%;
+	}
+
+	.main-card:hover {
+		transform: translateY(0%);
+	}
+	.main-card:active {
+		transform: translateY(0%);
+	}
+
+	.clients-section {
+		padding: 0px;
+		height: max-content;
+	}
+
+	@keyframes flip {
+		from {
+			transform: rotateX(0deg);
+		}
+		30% {
+			transform: rotateX(180deg);
+		}
+		100% {
+			transform: rotateX(180deg);
+		}
+	}
+	@keyframes rev-flip {
+		from {
+			transform: rotateX(180deg);
+		}
+		50% {
+			transform: rotateX(0deg);
+		}
+		100% {
+			transform: rotateX(0deg);
+		}
+	}
 }
 </style>
