@@ -120,7 +120,6 @@ export default {
 
 .contact-section-form-items-text-input {
 	font-size: 30px;
-	/* border-bottom: white 1px solid; */
 	color: white;
 	outline: none;
 	padding: 0px;
@@ -136,5 +135,39 @@ export default {
 	content: attr(placeholder);
 	filter: brightness(0.6);
 	pointer-events: none;
+}
+
+@media screen and (max-width: 1300px) {
+	.contact-section {
+		padding: 0px;
+		padding-top: 100px;
+		min-height: 100%;
+	}
+	.contact-section-text {
+		padding: 0px;
+	}
+	.contact-section-form {
+		padding: 0px;
+	}
+
+	.contact-section-text {
+		text-align: center;
+		font-size: 24px;
+	}
+	.contact-section-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact-section-form {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	.contact-section-form-items-text {
+		text-align: center;
+		font-size: 24px;
+	}
+	.contact-section-form-items-text-input {
+		font-size: 24px;
+	}
 }
 </style>
