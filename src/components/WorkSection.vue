@@ -144,14 +144,15 @@ export default {
 
 .right-panel {
 	overflow-x: scroll;
-	height: 100%;
+	height: 95%;
+	width: 98%;
 	display: grid;
 	align-items: center;
 	background: #2c3e50;
 	justify-content: right;
 	overflow: hidden;
 	border-radius: 14px;
-	box-shadow: inset 20px 0px 20px 7px rgb(0 0 0 / 20%);
+	box-shadow: inset 0px 0px 20px 7px rgb(0 0 0 / 20%);
 }
 
 .work-section-carousel {

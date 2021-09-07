@@ -82,7 +82,6 @@ export default {
 		buttons: [
 			{
 				label: "Portfolio",
-				action: null,
 				click: () => {
 					let ele = document.getElementById("portfolio");
 					ele.scrollIntoView({ behavior: "smooth" });
@@ -90,7 +89,6 @@ export default {
 			},
 			{
 				label: "Services",
-				action: null,
 				click: () => {
 					let ele = document.getElementById("contact");
 					ele.scrollIntoView;
@@ -98,7 +96,6 @@ export default {
 			},
 			{
 				label: "Contact",
-				action: null,
 				click: () => {
 					let ele = document.getElementById("contact");
 					ele.scrollIntoView({ behavior: "smooth" });
@@ -106,7 +103,6 @@ export default {
 			},
 			{
 				label: "About",
-				action: null,
 				click: () => {
 					let ele = document.getElementById("about");
 					ele.scrollIntoView({ behavior: "smooth" });

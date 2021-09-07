@@ -172,12 +172,12 @@ export default {
 	transform-origin: 50% 95%;
 }
 
-.main-card:hover {
+/* .main-card:hover {
 	transform: translateY(-10%);
 }
 .main-card:active {
 	transform: translateY(0px);
-}
+} */
 
 .main-card > * {
 	pointer-events: none;
@@ -205,8 +205,8 @@ export default {
 	backface-visibility: hidden;
 }
 
-/* @keyframes flip-v0 {
-	1% {
+/* @keyframes flip {
+	0% {
 		animation-timing-function: ease-in;
 	}
 	20% {
@@ -214,8 +214,7 @@ export default {
 		animation-timing-function: ease-in-out;
 	}
 	25% {
-		transform: translateY(-50%) translateZ(100px) rotateX(0deg)
-			rotateZ(5deg);
+		transform: translateY(-50%) rotateX(0deg) rotateZ(5deg);
 		z-index: 0;
 	}
 	50% {
@@ -230,9 +229,9 @@ export default {
 		z-index: 10;
 		transform: translateY(-100%) rotateX(180deg) rotateZ(5deg);
 	}
-}
+} */
 
-@keyframes rev-flip-v0 {
+/* @keyframes rev-flip {
 	0% {
 		z-index: 10;
 		transform: translateY(-100%) rotateX(180deg) rotateZ(5deg);
@@ -260,23 +259,22 @@ export default {
 } */
 
 @keyframes flip {
-	1% {
-		animation-timing-function: ease-in;
+	0% {
+		animation-timing-function: linear;
 	}
 	20% {
 		transform: translateY(-50%);
-		animation-timing-function: ease-in-out;
 	}
 	25% {
-		transform: translateY(-50%) translateZ(100px) rotateX(0deg);
+		transform: translateY(-50%) rotateX(0deg);
 		z-index: 0;
 	}
 	50% {
 		z-index: 10;
-		transform: translateY(-80%) rotateX(180deg);
-		animation-timing-function: cubic-bezier(0.47, 0.52, 0.13, 1.7);
+		transform: translateY(-100%) rotateX(180deg);
 	}
 	80% {
+		z-index: 10;
 		transform: translateY(-100%) rotateX(180deg);
 	}
 	100% {
@@ -299,12 +297,12 @@ export default {
 	50% {
 		transform: translateY(-50%) rotateX(0deg);
 		z-index: 0;
-		animation-timing-function: cubic-bezier(0.47, 0.52, 0.13, 1.7);
+		animation-timing-function: linear;
 	}
 
-	/* 80% {
-		transform: translateY(-50%);
-	} */
+	80% {
+		transform: translateY(0%);
+	}
 	100% {
 		animation-timing-function: ease-in;
 	}
