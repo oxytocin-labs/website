@@ -235,7 +235,8 @@ export default {
 
 	.work-section-card {
 		border-radius: 0px;
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		height: max-content;
 		width: 100%;
 		align-items: center;
