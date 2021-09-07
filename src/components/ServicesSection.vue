@@ -22,6 +22,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 export default {
+	beforeDestroy() {
+		ScrollTrigger.getAll().forEach((t) => t.kill());
+	},
 	mounted() {
 		gsap.registerPlugin(ScrollTrigger);
 

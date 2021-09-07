@@ -2,7 +2,9 @@
 	<div id="app">
 		<HelloWorld />
 		<transition :name="transitionName" mode="out-in">
-			<router-view></router-view>
+			<keep-alive>
+				<router-view keepalive></router-view>
+			</keep-alive>
 		</transition>
 	</div>
 </template>

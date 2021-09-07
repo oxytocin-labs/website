@@ -186,7 +186,6 @@ export default {
 }
 
 .item {
-	/* margin-right: 16px; */
 	margin: 0px 25px;
 	transition: all 300ms cubic-bezier(0.66, 0.29, 0.16, 1.5);
 }
@@ -246,6 +245,13 @@ export default {
 	}
 	.right-panel {
 		border-radius: 0px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.item:hover {
+		z-index: 100;
+		transform: scale(1);
 	}
 }
 </style>
