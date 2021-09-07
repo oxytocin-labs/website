@@ -22,8 +22,8 @@
 							dark
 							style="margin: 0px"
 							size="large"
-							v-for="(button, idx) in buttons"
-							:key="idx"
+							v-for="button in buttons"
+							:key="button.label"
 							@click="button.click"
 							>{{ button.label }}</vs-button
 						>
@@ -73,43 +73,79 @@
 
 <script>
 export default {
-	name: "HelloWorld",
-	props: {
-		msg: String,
+	data() {
+		return {
+			openMenu: false,
+			buttons: [],
+			homePageButtons: [
+				{
+					label: "Portfolio",
+					click: () => {
+						document
+							.querySelector("#portfolio")
+							.scrollIntoView({ behavior: "smooth" });
+					},
+				},
+				{
+					label: "Services",
+					click: () => {
+						let ele = document.getElementById("contact");
+						ele.scrollIntoView;
+					},
+				},
+				{
+					label: "Contact",
+					click: () => {
+						document
+							.querySelector("#contact")
+							.scrollIntoView({ behavior: "smooth" });
+					},
+				},
+				{
+					label: "About",
+					click: () => {
+						this.$router.push("about");
+					},
+				},
+			],
+		};
 	},
-	data: () => ({
-		openMenu: false,
-		buttons: [
-			{
-				label: "Portfolio",
-				click: () => {
-					let ele = document.getElementById("portfolio");
-					ele.scrollIntoView({ behavior: "smooth" });
+
+	beforeMount() {
+		if (this.$route.path === "/") {
+			this.buttons = this.homePageButtons;
+		} else {
+			this.buttons = [
+				{
+					label: "Back",
+					click: () => {
+						this.$router.push("/");
+					},
 				},
-			},
-			{
-				label: "Services",
-				click: () => {
-					let ele = document.getElementById("contact");
-					ele.scrollIntoView;
-				},
-			},
-			{
-				label: "Contact",
-				click: () => {
-					let ele = document.getElementById("contact");
-					ele.scrollIntoView({ behavior: "smooth" });
-				},
-			},
-			{
-				label: "About",
-				click: () => {
-					let ele = document.getElementById("about");
-					ele.scrollIntoView({ behavior: "smooth" });
-				},
-			},
-		],
-	}),
+			];
+		}
+	},
+	computed: {
+		curRoute() {
+			return this.$route.path;
+		},
+	},
+	watch: {
+		curRoute() {
+			if (this.$route.path === "/") {
+				this.buttons = this.homePageButtons;
+			} else {
+				this.buttons = [
+					{
+						label: "Back",
+						click: () => {
+							this.$router.push("/");
+						},
+					},
+				];
+			}
+		},
+	},
 };
 </script>
 
@@ -150,10 +186,13 @@ export default {
 .nav-actions {
 	display: flex;
 	margin: -10px;
+	transition: 0.3s;
+	width: max-content;
 }
 
 .nav-actions-card {
 	position: relative;
+	width: max-content;
 }
 .nav-button {
 	display: none;

@@ -3,6 +3,7 @@
 		<LandingSection />
 		<WorkSection />
 		<ClientsAndTestimonialSection />
+		<ServicesSection />
 		<ContactSection />
 	</div>
 </template>
@@ -11,6 +12,7 @@
 import ClientsAndTestimonialSection from "../components/ClientsAndTestimonialSection.vue";
 import ContactSection from "../components/ContactSection.vue";
 import LandingSection from "../components/LandingSection.vue";
+import ServicesSection from "../components/ServicesSection.vue";
 import WorkSection from "../components/WorkSection.vue";
 
 export default {
@@ -19,6 +21,7 @@ export default {
 		LandingSection,
 		WorkSection,
 		ClientsAndTestimonialSection,
+		ServicesSection,
 		ContactSection,
 	},
 };

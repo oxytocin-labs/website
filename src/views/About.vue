@@ -1,5 +1,28 @@
 <template>
 	<div class="about">
-		<h1>This is an about page</h1>
+		<div class="about-content">
+			<v-card elevation="12" class="about-card">
+				<v-card-title>This is the about page</v-card-title>
+			</v-card>
+		</div>
 	</div>
 </template>
+
+<style scoped>
+.about {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	width: 100%;
+}
+.about-content {
+	display: grid;
+	place-items: center;
+	width: 90%;
+	height: 90%;
+}
+
+.about-card {
+	padding: 32px;
+}
+</style>

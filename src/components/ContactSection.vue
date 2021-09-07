@@ -36,7 +36,9 @@
 							margin-top: 32px;
 						"
 					>
-						<vs-button shadow size="large">Get in Touch</vs-button>
+						<vs-button shadow size="large" @click="sendMail"
+							>Get in Touch</vs-button
+						>
 					</div>
 				</div>
 			</div>
@@ -58,8 +60,12 @@ export default {
 			this.email = e.target.innerHTML;
 		},
 		keypress(e) {
-			console.log(e.which);
 			if (e.which === 13) e.preventDefault();
+		},
+		sendMail() {
+			let subject = "I would like to get contacted!";
+			let body = `${this.name}%0D%0A(${this.email})`;
+			document.location = `mailto:abhishek.singh@oxytocin.is?subject=${subject}&body=${body}`;
 		},
 	},
 };
@@ -75,13 +81,14 @@ export default {
 .contact-section {
 	height: max-content;
 	width: 80vw;
+	height: 100%;
 	color: white;
 	display: flex;
 	flex-direction: column;
-	grid-template-rows: auto auto;
 	box-sizing: border-box;
 	padding: 50px;
 	max-width: 80vw;
+	justify-content: center;
 }
 .contact-section-text {
 	width: 100%;

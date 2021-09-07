@@ -14,8 +14,14 @@
 					millions of users backed by the principles of simplicity,
 					performance, and security.
 				</span>
-				<vs-button border size="xl" class="landing-section-text-btn"
-					>Get in Touch</vs-button
+				<v-btn
+					outlined
+					rounded
+					color="#fff"
+					large
+					class="landing-section-text-btn"
+					@click="gotoAbout"
+					>Get in Touch</v-btn
 				>
 			</div>
 			<div class="landing-section-image-container">
@@ -26,7 +32,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+	methods: {
+		gotoAbout(e) {
+			document
+				.querySelector("#contact")
+				.scrollIntoView({ behavior: "smooth" });
+			e.target.blur();
+		},
+	},
+};
 </script>
 
 <style>
@@ -83,11 +98,17 @@ export default {};
 }
 
 .landing-section-text-btn {
-	position: absolute !important;
+	position: absolute;
 	left: 0;
-	top: calc(100% + 30px);
+	top: calc(100% + 50px);
 }
 @media screen and (max-width: 1300px) {
+	.landing-section-container {
+		box-sizing: border-box;
+		padding-top: 20%;
+		align-items: normal;
+	}
+
 	.landing-section-image-container {
 		display: none;
 	}

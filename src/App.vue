@@ -1,15 +1,25 @@
 <template>
 	<div id="app">
 		<HelloWorld />
-		<router-view />
+		<transition :name="transitionName" mode="out-in">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-	components: {
-		HelloWorld,
+	components: { HelloWorld },
+	data() {
+		return {
+			transitionName: "appear",
+		};
+	},
+
+	watch: {
+		"$route.meta"() {
+			this.transitionName = this.$route.meta.transition;
+		},
 	},
 };
 </script>
@@ -36,6 +46,45 @@ html {
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	/* overflow-x: hidden; */
+}
+
+.appear-enter-active,
+.appear-leave-active {
+	transition: 300ms all;
+}
+
+.appear-enter,
+.appear-leave-to {
+	opacity: 0;
+}
+
+/* home */
+.slideleft-enter-active,
+.slideleft-leave-active {
+	transition: 300ms all;
+}
+
+.slideleft-enter {
+	transform: translateX(-50%);
+	opacity: 0;
+}
+.slideleft-leave-to {
+	transform: translateX(50%);
+	opacity: 0;
+}
+
+/* about */
+.slideright-enter-active,
+.slideright-leave-active {
+	transition: 300ms all;
+}
+
+.slideright-enter {
+	transform: translateX(50%);
+	opacity: 0;
+}
+.slideright-leave-to {
+	transform: translateX(-50%);
+	opacity: 0;
 }
 </style>
