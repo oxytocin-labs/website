@@ -16,29 +16,23 @@
 					<!-- TODO: make this a component -->
 					<div style="position: relative">
 						<div
-							ref="carousel-item"
 							v-for="card in cards"
 							:key="card.id"
 							class="item"
 							@mouseenter="pause"
 							@mouseleave="play"
 						>
-							<vs-card type="1">
+							<vs-card style="width: 300px">
 								<template #title>
 									<h3>{{ card.title }}</h3>
 								</template>
 								<template #img>
-									<img img :src="card.img" alt="" />
+									<img :src="card.img" alt="" />
 								</template>
 								<template #text>
-									<p>
+									<p class="card-content">
 										{{ card.content }}
 									</p>
-								</template>
-								<template #interactions>
-									<vs-button danger icon>
-										<v-icon>mdi-heart</v-icon>
-									</vs-button>
 								</template>
 							</vs-card>
 						</div>
@@ -50,7 +44,7 @@
 							@mouseenter="pause"
 							@mouseleave="play"
 						>
-							<vs-card type="1">
+							<vs-card style="width: 300px">
 								<template #title>
 									<h3>{{ card.title }}</h3>
 								</template>
@@ -58,14 +52,9 @@
 									<img :src="card.img" alt="" />
 								</template>
 								<template #text>
-									<p>
+									<p class="card-content">
 										{{ card.content }}
 									</p>
-								</template>
-								<template #interactions>
-									<vs-button danger icon>
-										<v-icon>mdi-heart</v-icon>
-									</vs-button>
 								</template>
 							</vs-card>
 						</div>
@@ -84,14 +73,15 @@ export default {
 			{
 				id: "1",
 				title: "Facil",
-				content: "aslkdjals; djalsalkd jasl; djasl;k jalk;j aslk as",
-				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-cc5bbb32-c711-40df-bb89-3dd34312844e.jpg?w=1023&e=webp",
+				content:
+					"Enim nostrud eu labore labore ullamco. Velit laboris exercitation aliquip proident qui nulla occaecat labore velit.",
+				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-f6b7ec59-907d-4d54-bb42-1e747a0b1081.jpg?w=1023&e=webp",
 			},
 			{
 				id: "2",
 				title: "Multitudes",
 				content: "sadjaslk jlcmlacalcmj cals;cjajklas",
-				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-cc5bbb32-c711-40df-bb89-3dd34312844e.jpg?w=1023&e=webp",
+				img: "https://picsum.photos/200/300",
 			},
 			{
 				id: "3",
@@ -102,7 +92,7 @@ export default {
 			{
 				id: "4",
 				title: "Your Project Here",
-				content: "",
+				content: "Contact us to know more.",
 				img: "https://icon-library.com/images/questionmark-icon/questionmark-icon-7.jpg",
 			},
 		],
@@ -121,7 +111,8 @@ export default {
 <style>
 .work-section {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	height: max-content;
 	border-radius: 16px;
 	display: grid;
 	place-items: center;
@@ -182,7 +173,6 @@ export default {
 	width: max-content;
 	align-items: center;
 	animation: slick 10s linear infinite;
-	/* border: 2px solid red; */
 }
 
 .item {
@@ -191,23 +181,14 @@ export default {
 }
 .item:hover {
 	margin-right: 16px;
-	transform: scale(1.3);
+	transform: scale(1.1);
 	margin: 0px 50px;
 	z-index: 100;
 }
 
-.list-enter-active,
-.list-leave-active {
-	position: absolute;
-}
-.list-enter {
-	transform: translateX(378px);
-	opacity: 0;
-}
-
-.list-leave-to {
-	transform: translateX(-378px);
-	opacity: 0;
+.card-content {
+	height: 100px;
+	width: 80%;
 }
 
 @keyframes slick {

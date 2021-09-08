@@ -41,7 +41,6 @@
 									<v-icon style="color: red" color="red"
 										>mdi-heart</v-icon
 									>
-									<span class="span"> 54 </span>
 								</vs-button>
 							</template>
 						</vs-card>
@@ -350,7 +349,8 @@ export default {
 	}
 
 	.clients-section-card-container {
-		flex-direction: column;
+		display: grid;
+		/* flex-direction: column; */
 		align-items: center;
 		gap: 24px;
 	}

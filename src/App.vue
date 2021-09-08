@@ -9,6 +9,7 @@
 	</div>
 </template>
 <script>
+// import data from "./assets/data.json";
 import HelloWorld from "./components/HelloWorld.vue";
 export default {
 	components: { HelloWorld },
@@ -23,6 +24,9 @@ export default {
 			this.transitionName = this.$route.meta.transition;
 		},
 	},
+	// mounted() {
+	// 	console.log(data);
+	// },
 };
 </script>
 <style>

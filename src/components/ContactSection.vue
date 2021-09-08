@@ -80,7 +80,7 @@ export default {
 }
 .contact-section {
 	height: max-content;
-	width: 80vw;
+	width: 100%;
 	height: 100%;
 	color: white;
 	display: flex;
@@ -110,19 +110,21 @@ export default {
 	line-height: 2;
 	text-align: left;
 	place-items: center;
-	max-width: 80vw;
+	max-width: 1366px;
 }
 .contact-section-form-items {
 	display: flex;
 	flex-direction: column;
-	max-width: 80vw;
+	max-width: 1366px;
 	width: 100%;
 }
 
 .contact-section-form-items-text {
+	display: block;
+	max-width: 1440px;
 	align-self: center;
 	height: max-content;
-	width: fit-content;
+	width: 100%;
 }
 
 .contact-section-form-items-text-input {
@@ -132,7 +134,7 @@ export default {
 	padding: 0px;
 	margin: 0px;
 	width: max-content;
-	max-width: 50vw;
+	max-width: 100%;
 	display: inline-block;
 	word-wrap: break-word;
 	overflow-wrap: break-word;

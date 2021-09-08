@@ -89,8 +89,9 @@ export default {
 				{
 					label: "Services",
 					click: () => {
-						let ele = document.getElementById("contact");
-						ele.scrollIntoView;
+						document
+							.querySelector("#services")
+							.scrollIntoView({ behavior: "smooth" });
 					},
 				},
 				{

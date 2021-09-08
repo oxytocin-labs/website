@@ -1,18 +1,38 @@
 <template>
-	<div class="service-section-container">
+	<div id="services" class="service-section-container">
 		<div class="service-section">
 			<div class="service-section-left">
 				<div class="sticky-boi">
 					<div class="sticky-boi-content">
-						<h1>Hello</h1>
+						<div class="left-panel-text">
+							Teams that understand your vision and don’t need a
+							perfectly written plan to execute.
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="service-section-right">
-				<section class="panel red">ONE</section>
-				<section class="panel orange">TWO</section>
-				<section class="panel purple">THREE</section>
-				<section class="panel green">FOUR</section>
+				<section
+					v-for="service in services"
+					:key="service.id"
+					class="panel right-panel-section"
+				>
+					<div class="right-panel-section-content-container">
+						<div class="right-panel-section-content">
+							<div class="right-panel-section-content-svg">
+								<DevelopmentSVG />
+							</div>
+							<div class="right-panel-section-content-title">
+								{{ service.title }}
+							</div>
+							<div class="right-panel-section-content-para">
+								<p>
+									{{ service.content }}
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
@@ -21,7 +41,37 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+
+import DevelopmentSVG from "../assets/SVG components/DevelopmentSVG.vue";
 export default {
+	components: {
+		DevelopmentSVG,
+	},
+	data() {
+		return {
+			svg: "",
+			services: [
+				{
+					id: "1",
+					title: " Development",
+					content:
+						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+				},
+				{
+					id: "2",
+					title: " Development",
+					content:
+						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+				},
+				{
+					id: "3",
+					title: " Development",
+					content:
+						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+				},
+			],
+		};
+	},
 	beforeDestroy() {
 		ScrollTrigger.getAll().forEach((t) => t.kill());
 	},
@@ -54,12 +104,15 @@ export default {
 			}
 		});
 	},
+	created() {
+		this.svg = require(`../assets/development.svg`);
+	},
 };
 </script>
 
 <style>
 .sticky-boi {
-	padding: 24px;
+	padding: 48px;
 	box-sizing: border-box;
 	width: 100%;
 	height: 100vh;
@@ -69,11 +122,16 @@ export default {
 
 .sticky-boi-content {
 	display: grid;
-	place-items: center;
+	box-sizing: border-box;
+	padding: 36px;
+	/* place-items: center; */
 	height: 100%;
 	width: 100%;
 }
-
+.left-panel-text {
+	font-size: 64px;
+	font-weight: 500;
+}
 .service-section-container {
 	background-color: #f2f2f2;
 	height: max-content;
@@ -95,38 +153,73 @@ export default {
 }
 .panel {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
 	font-weight: 600;
 	font-size: 1.5em;
 	text-align: center;
-	color: white;
+	color: black;
 	position: relative;
 	box-sizing: border-box;
 	width: 100%;
 	height: 100vh;
 }
 
-.red {
-	background: lightcoral;
+/* .right-panel-section {
+	border: solid 1px black;
+} */
+.right-panel-section-content-container {
+	display: flex;
+	flex-direction: column;
+	border: solid 1px black;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #f1efe9;
 }
-
-.orange {
-	background: lightsalmon;
+.right-panel-section-content {
+	margin-top: auto;
+	position: relative;
+	box-sizing: border-box;
+	padding: 48px;
 }
-
-.purple {
-	background: paleturquoise;
+.right-panel-section-content-title {
+	font-weight: 600;
+	text-align: left;
+	font-size: 36px;
+	padding: 10px 0px;
 }
-
-.green {
-	background: lightgreen;
+.right-panel-section-content-para {
+	color: #2c3e50;
+	word-spacing: 6px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: left;
+	font-size: 20px;
+	padding: 10px 0px;
 }
-
+.right-panel-section-content-svg {
+	margin-bottom: 24px;
+	height: 50%;
+	width: 50%;
+}
 @media screen and (max-width: 1300px) {
 	.service-section {
 		display: flex;
 		flex-direction: column;
+	}
+	.sticky-boi {
+		height: max-content;
+	}
+	.sticky-boi-content {
+		height: max-content;
+	}
+	.left-panel-text {
+		font-size: 24px;
+	}
+
+	.right-panel-section-content {
+		top: 0%;
 	}
 }
 </style>
