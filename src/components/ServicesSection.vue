@@ -91,7 +91,7 @@ export default {
 						duration: 0.5,
 						delay: 0,
 						inertia: false,
-						ease: "elastic.out(1,1)",
+						ease: "power4.out",
 					},
 				});
 			else {
@@ -218,8 +218,16 @@ export default {
 		font-size: 24px;
 	}
 
+	.right-panel-section-content-container {
+		justify-content: center;
+	}
 	.right-panel-section-content {
-		top: 0%;
+		box-sizing: border-box;
+		padding: 8px;
+		margin-top: 0px;
+	}
+	.right-panel-section-content-svg {
+		height: max-content;
 	}
 }
 </style>
