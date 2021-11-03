@@ -20,7 +20,7 @@
 					<div class="right-panel-section-content-container">
 						<div class="right-panel-section-content">
 							<div class="right-panel-section-content-svg">
-								<img :src="service.img" alt="" height="300px" />
+								<img :src="service.img" alt="" width="300px" />
 							</div>
 							<div class="right-panel-section-content-title">
 								{{ service.title }}
@@ -202,7 +202,7 @@ export default {
 	padding: 10px 0px;
 }
 .right-panel-section-content-svg {
-	margin-bottom: 96px;
+	margin-bottom: 48px;
 	height: 50%;
 	width: 50%;
 }

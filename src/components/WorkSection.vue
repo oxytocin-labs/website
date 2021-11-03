@@ -15,6 +15,7 @@
 							v-for="card in cards"
 							:key="card.id"
 							class="item"
+							v-on:click = "clickAction"
 							@mouseenter="pause"
 							@mouseleave="play"
 						>
@@ -37,6 +38,7 @@
 							v-for="card in cards"
 							:key="card.id + '_dup'"
 							class="item"
+							v-on:click = "clickAction"
 							@mouseenter="pause"
 							@mouseleave="play"
 						>
@@ -89,16 +91,26 @@ export default {
 			},
 			{
 				id: "3",
+				title: "Gajo",
+				website: "",
+				timeframe: "",
+				services: "UI/UX, Development, Strategy",				
+				timeframe: "October 2021 -",
+				content: "Career exploration for GenZ - In progress",
+				img: "https://i.imgur.com/UNzjSJR.jpg",
+			},			
+			{
+				id: "4",
 				title: "Prism",
 				website: "",
 				timeframe: "",
 				services: "UI/UX, Development, Strategy",				
 				timeframe: "October 2021 -",
 				content: "AdTech content personalization - In progress",
-				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-cc5bbb32-c711-40df-bb89-3dd34312844e.jpg?w=1023&e=webp",
+				img: "https://i.imgur.com/H7JmATC.jpg",
 			},
 			{
-				id: "4",
+				id: "5",
 				title: "Your Project Here",
 				content: "Contact us to know more.",
 				img: "https://icon-library.com/images/questionmark-icon/questionmark-icon-7.jpg",
@@ -106,6 +118,9 @@ export default {
 		],
 	}),
 	methods: {
+		clickAction(e){
+			console.log(e);
+		},
 		pause(e) {
 			e.target.offsetParent.style.animationPlayState = "paused";
 		},
