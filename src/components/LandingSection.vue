@@ -1,18 +1,17 @@
 <template>
-	<div id="portfolio" class="landing-section-container">
+	<div id="landing" class="landing-section-container">
 		<div class="landing-section-text-container">
 			<div class="landing-section-text-title">
 				<span
-					>Imagine Exponential Engineers Who care about your
-					project</span
+					>The right applications, carefully crafted and delivered.</span
 				>
 			</div>
 			<div class="landing-section-text-para">
 				<span>
-					We've consistently and meticulously executed on the most
+					We've consistently and meticulously munched on the most
 					complex systems within FinTech, Social, Ecommerce for
 					millions of users backed by the principles of simplicity,
-					performance, and security.
+					performance, and security. (Web3 soon!)
 				</span>
 				<v-btn
 					outlined
@@ -25,7 +24,7 @@
 				>
 			</div>
 			<div class="landing-section-image-container">
-				<img src="https://loka.com/images/hero-3.png" alt="" />
+				<img src="../assets/murilo-viviani-7wZxpC2oXYU-unsplash.jpg" alt="" />
 			</div>
 		</div>
 	</div>

@@ -1,14 +1,10 @@
 <template>
-	<div class="work-section">
+	<div id ="portfolio" class="work-section">
 		<div class="work-section-card">
 			<div class="work-section-text-container">
 				<div class="work-section-text-title">Latest Launches</div>
 				<div class="work-section-text-para">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-					Nam quia accusamus consequatur tempora necessitatibus
-					reprehenderit voluptatem iusto officiis obcaecati cupiditate
-					in quos fuga impedit vero ullam voluptate, dolorum velit
-					commodi?
+					We're busy building beautiful digital products, brands, and experiences with contrarian founders.
 				</div>
 			</div>
 			<div class="right-panel">
@@ -72,21 +68,33 @@ export default {
 		cards: [
 			{
 				id: "1",
-				title: "Facil",
-				content:
-					"Enim nostrud eu labore labore ullamco. Velit laboris exercitation aliquip proident qui nulla occaecat labore velit.",
-				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-f6b7ec59-907d-4d54-bb42-1e747a0b1081.jpg?w=1023&e=webp",
+				title: "ViveFácil",
+				website: "https://vivefacil.com.mx/",
+				services: "UI/UX, Development",
+				timeframe: "August - September 2021",
+				content: `We leveraged our FinTech background, working close with Joe to 
+				create software for novel financial products to bring trust & liquidity to 
+				independent real estate transactions across Latin America.`,
+				img: "https://i.imgur.com/CiJAK3H.jpg",
 			},
 			{
 				id: "2",
 				title: "Multitudes",
-				content: "sadjaslk jlcmlacalcmj cals;cjajklas",
-				img: "https://picsum.photos/200/300",
+				website: "https://app.multitudes.space/",
+				timeframe: "August - October 2021",
+				services: "UI/UX, Development, Strategy",
+				content: `We teamed up with the Multitudes founding team to create customizable
+				guided pseudonymous conversations in audio rooms where one's voice is modulated.`,
+				img: "https://i.imgur.com/CirSaZE.jpg",
 			},
 			{
 				id: "3",
 				title: "Prism",
-				content: "adjasc jacj alscjdalscjmoauw jcasd",
+				website: "",
+				timeframe: "",
+				services: "UI/UX, Development, Strategy",				
+				timeframe: "October 2021 -",
+				content: "AdTech content personalization - In progress",
 				img: "https://d2kq0urxkarztv.cloudfront.net/5f971f905e1dde006ff50ec9/2318223/upload-cc5bbb32-c711-40df-bb89-3dd34312844e.jpg?w=1023&e=webp",
 			},
 			{

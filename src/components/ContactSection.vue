@@ -2,11 +2,9 @@
 	<div id="contact" class="contact-section-container">
 		<div class="contact-section">
 			<div class="contact-section-text">
+			 	<!--- <p>Hello. We’ve been expecting you. Got a project? Let’s talk</p> --->
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-					Quasi modi corporis facilis delectus libero optio recusandae
-					quos voluptas architecto magnam eos atque, quia accusantium
-					vero pariatur distinctio. Et, culpa quisquam.
+					OK, let's go! First we'll have a quick chat about your idea. Our engineers will create a cost-free engineering plan of your project that you can share with your team. What's your name?
 				</p>
 			</div>
 			<div class="contact-section-form">
@@ -26,9 +24,18 @@
 							placeholder="email"
 							class="contact-section-form-items-text-input"
 							@blur="changeEmail"
-						/>
-						.
+						/>.					
 					</div>
+					<div class="contact-section-form-items-text">
+						I'm working on
+						<div
+							contenteditable="true"
+							placeholder="a breakthrough idea in the creative AdTech space"
+							class="contact-section-form-items-text-input"
+							@blur="changeProjectDescription"
+						/>.
+						
+					</div>					
 					<div
 						style="
 							display: grid;
@@ -51,6 +58,7 @@ export default {
 	data: () => ({
 		name: "",
 		email: "",
+		project_description: "",
 	}),
 	methods: {
 		changeName(e) {
@@ -59,13 +67,17 @@ export default {
 		changeEmail(e) {
 			this.email = e.target.innerHTML;
 		},
+		changeProjectDescription(e) {
+			this.project_description = e.target.innerHTML;
+		},		
 		keypress(e) {
 			if (e.which === 13) e.preventDefault();
 		},
 		sendMail() {
-			let subject = "I would like to get contacted!";
-			let body = `${this.name}%0D%0A(${this.email})`;
-			document.location = `mailto:abhishek.singh@oxytocin.is?subject=${subject}&body=${body}`;
+			let subject = `It's Time To Build!`;
+			let body = `${this.name}
+			${this.name}`;
+			document.location = `mailto:rnjai.lamba@oxytocin.is?subject=${subject}&body=${body}`;
 		},
 	},
 };

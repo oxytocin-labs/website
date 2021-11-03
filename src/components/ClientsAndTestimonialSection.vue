@@ -3,10 +3,7 @@
 		<div class="clients-section-text">
 			<div class="clients-section-text-title">Clients & Testimonials</div>
 			<div class="clients-section-text-para">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-				vitae hic debitis velit nulla amet error unde asperiores odio
-				minima, eos quas voluptatem dolorem esse beatae minus expedita
-				quod voluptatibus?
+				
 			</div>
 		</div>
 		<div class="clients-section-card-container">
@@ -37,11 +34,11 @@
 								</p>
 							</template>
 							<template #interactions>
-								<vs-button class="btn-chat" shadow primary>
+								<!--- <vs-button class="btn-chat" shadow primary>
 									<v-icon style="color: red" color="red"
 										>mdi-heart</v-icon
-									>
-								</vs-button>
+									> 
+								</vs-button> --->
 							</template>
 						</vs-card>
 					</div>
@@ -75,46 +72,37 @@ export default {
 		testimonials: [
 			{
 				id: "1",
-				title: "Mark",
-				content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-				vitae hic debitis velit nulla amet error unde asperiores odio
-				minima, eos quas voluptatem dolorem esse beatae minus expedita
-				quod voluptatibus?`,
+				title: "Joe Merullo, CEO, ViveFacil",
+				content: `Typing...`,
 			},
 			{
 				id: "2",
-				title: "Adam",
-				content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-				vitae hic debitis velit nulla amet error unde asperiores odio
-				minima, eos quas voluptatem dolorem esse beatae minus expedita
-				quod voluptatibus?`,
+				title: "Manny Fassihi, CEO, Multitudes",
+				content: `Thinking...`,
 			},
 			{
 				id: "3",
-				title: "Clara",
-				content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-				vitae hic debitis velit nulla amet error unde asperiores odio
-				minima, eos quas voluptatem dolorem esse beatae minus expedita
-				quod voluptatibus?`,
+				title: "Craig McDonald, EIR, Prism",
+				content: `Writing...`,
 			},
 		],
 	}),
 	methods: {
 		flip(e) {
 			e.target.style.animation = null;
-			e.target.style.animation = "flip 1.5s linear forwards";
+			e.target.style.animation = "flip 0.5s linear forwards";
 		},
 		flipBack(e) {
 			if (
 				e.target.style.animation ===
-				"1.5s linear 0s 1 normal forwards running flip"
+				"0.5s linear 0s 1 normal forwards running flip"
 			) {
 				setTimeout(() => {
-					e.target.style.animation = "rev-flip 1.5s linear forwards";
+					e.target.style.animation = "rev-flip 0.5s linear forwards";
 					setTimeout(() => {
 						e.target.style.animation = null;
-					}, 1500);
-				}, 1500);
+					}, 500);
+				}, 500);
 			}
 		},
 	},

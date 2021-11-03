@@ -5,8 +5,8 @@
 				<div class="sticky-boi">
 					<div class="sticky-boi-content">
 						<div class="left-panel-text">
-							Teams that understand your vision and don’t need a
-							perfectly written plan to execute.
+							We use brains and fancy machines to create brands, products and experiences 
+							that help our clients solve problems and seize opportunities.
 						</div>
 					</div>
 				</div>
@@ -20,7 +20,7 @@
 					<div class="right-panel-section-content-container">
 						<div class="right-panel-section-content">
 							<div class="right-panel-section-content-svg">
-								<DevelopmentSVG />
+								<img :src="service.img" alt="" height="300px" />
 							</div>
 							<div class="right-panel-section-content-title">
 								{{ service.title }}
@@ -45,7 +45,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import DevelopmentSVG from "../assets/SVG components/DevelopmentSVG.vue";
 export default {
 	components: {
-		DevelopmentSVG,
+		
 	},
 	data() {
 		return {
@@ -53,21 +53,24 @@ export default {
 			services: [
 				{
 					id: "1",
-					title: " Development",
+					title: "The right applications",
+					img: "https://imgur.com/bj6nvLt.jpg",					
 					content:
-						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+						"We leverage our years of agile experience to build software you need.",
 				},
 				{
 					id: "2",
-					title: " Development",
+					title: "Carefully crafted",
+					img: "https://i.imgur.com/tgwRwIw.jpg",					
 					content:
-						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+						"Because beautifully designed and engineered software makes all the difference in the world.",
 				},
 				{
 					id: "3",
-					title: " Development",
+					title: " And delivered.",
+					img: "https://i.imgur.com/DQ0NzQp.jpg",					
 					content:
-						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit atque quos aliqua beatae dignissimos corporis repudiandae illo earum, ab animi maiores unde voluptatibus et. Ea veritatis molestiae delectus aspernatur sequi.",
+						"On time. Because your business, your time and our reputation is at stake.",
 				},
 			],
 		};
@@ -199,7 +202,7 @@ export default {
 	padding: 10px 0px;
 }
 .right-panel-section-content-svg {
-	margin-bottom: 24px;
+	margin-bottom: 96px;
 	height: 50%;
 	width: 50%;
 }
