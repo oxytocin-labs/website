@@ -30,7 +30,7 @@
 						I'm working on
 						<div
 							contenteditable="true"
-							placeholder="a breakthrough idea in the creative AdTech space"
+							placeholder="a breakthrough..."
 							class="contact-section-form-items-text-input"
 							@blur="changeProjectDescription"
 						/>.
@@ -74,10 +74,9 @@ export default {
 			if (e.which === 13) e.preventDefault();
 		},
 		sendMail() {
-			let subject = `It's Time To Build!`;
-			let body = `${this.name}
-			${this.name}`;
-			document.location = `mailto:rnjai.lamba@oxytocin.is?subject=${subject}&body=${body}`;
+			let subject = `${this.name} <> `+`Oxytocin`;
+			let body = `I'm working on ` + `${this.project_description}` + `. Let's catch up soon, tell me some times that work for you!`;
+			document.location = `mailto:rnjai.lamba@oxytocin.is?subject=${subject}&body=${body}&cc=${this.email }`;
 		},
 	},
 };
