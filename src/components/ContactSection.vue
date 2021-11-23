@@ -30,7 +30,7 @@
 						I'm working on
 						<div
 							contenteditable="true"
-							placeholder="a breakthrough..."
+							placeholder="this idea..."
 							class="contact-section-form-items-text-input"
 							@blur="changeProjectDescription"
 						/>.
