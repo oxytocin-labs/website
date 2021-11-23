@@ -24,7 +24,7 @@
 							placeholder="email"
 							class="contact-section-form-items-text-input"
 							@blur="changeEmail"
-						/>.					
+						/>					
 					</div>
 					<div class="contact-section-form-items-text">
 						I'm working on
@@ -33,7 +33,7 @@
 							placeholder="this idea..."
 							class="contact-section-form-items-text-input"
 							@blur="changeProjectDescription"
-						/>.
+						/>
 						
 					</div>					
 					<div
