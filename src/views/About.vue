@@ -16,6 +16,8 @@
 				</ul>
 				<br>
 				We think we can do all these fast and reliably after building out 10s of products without hiccups for millions of end users.
+				<br>
+				An easy way to think about what we do is give you the ability to forget about the complexities of building an MVP by transferring them to us.				 
 				 </v-card-text-large>
 				 
 
