@@ -5,8 +5,7 @@
 				<div class="sticky-boi">
 					<div class="sticky-boi-content">
 						<div class="left-panel-text">
-							We use brains and fancy machines to create brands, products and experiences 
-							that help our clients solve problems and seize opportunities.
+							Effect of noise on productivity, health
 						</div>
 					</div>
 				</div>
@@ -20,14 +19,14 @@
 					<div class="right-panel-section-content-container">
 						<div class="right-panel-section-content">
 							<div class="right-panel-section-content-svg">
-								<img :src="service.img" alt="" width="300px" />
+								<img :src="service.img" alt="" width="150px" />
 							</div>
 							<div class="right-panel-section-content-title">
 								{{ service.title }}
 							</div>
 							<div class="right-panel-section-content-para">
-								<p>
-									{{ service.content }}
+								<p v-html=service.content>
+									{{  }}
 								</p>
 							</div>
 						</div>
@@ -53,25 +52,48 @@ export default {
 			services: [
 				{
 					id: "1",
-					title: "The right applications",
-					img: "https://imgur.com/bj6nvLt.jpg",					
+					title: "Health",
+					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						"We leverage our years of agile experience to build software you need.",
+						`Chronic noise is a largely unrecognized health threat that is increasing the risk of <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">hypertension, stroke and heart attacks</a> worldwide, including for <a href="https://web.archive.org/web/20230609182432/https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard">more than 100 million Americans.`,
 				},
 				{
 					id: "2",
-					title: "Carefully crafted",
-					img: "https://i.imgur.com/tgwRwIw.jpg",					
+					title: "Productivity",
+					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						"Because beautifully designed and engineered software makes all the difference in the world.",
+						`Noise is a remarkably insidious form of pollution: a <a href="https://pub.dega-akustik.de/ICA2019/data/articles/000062.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5% </a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
 				},
 				{
 					id: "3",
-					title: " And delivered.",
-					img: "https://i.imgur.com/DQ0NzQp.jpg",					
+					title: "Creativity",
+					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						"On time. Because your business, your time and our reputation is at stake.",
+						`Background music makes you worse at creative tasks with memory or verbal elements in <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/acp.3532">3 experiments</a>. No difference if the music was instrumental, foreign language, or a particular genre. Silence or low-level noise was best. `,
 				},
+				{
+					id: "4",
+					title: "Economics",
+					img: "https://imgur.com/vPylBfb.png",					
+					content:
+						`Economists who analyzed health care spending and productivity loss because of heart disease and hypertension have argued that a 5 dB reduction in U.S. noise could result in an <a href="https://web.archive.org/web/20230609182432/https://pubmed.ncbi.nlm.nih.gov/26024562/">annual benefit of $3.9 billion</a>`,
+				},
+				{
+					id: "5",
+					title: "Progressive Risk",
+					img: "https://imgur.com/vPylBfb.png",					
+					content:
+						`A study following <a href="https://web.archive.org/web/20230609182432/https://pubmed.ncbi.nlm.nih.gov/34775186/">more than four million people</a> for more than a decade, for example, found that, starting at just 35 dB, the risk of dying from cardiovascular disease increased by 2.9 percent for every 10 dB increase in exposure to road traffic noise.`,
+				},
+				{
+					id: "6",
+					title: "Sleep",
+					img: "https://imgur.com/vPylBfb.png",					
+					content:
+						`The W.H.O. has long recommended <a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">less than </a><a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">40 dB</a> as an annual average of nighttime noise outside bedrooms to prevent negative health effects, and <a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise">less than</a><a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise"> 30 dB</a> of nighttime noise inside bedrooms for high-quality sleep. 
+
+						Nearly a third of the U.S. population lives in areas exposed to noise levels of at least 45 dB, according to a preliminary analysis based on models of road, rail and aircraft noise in 2020 from the Department of Transportation.`,
+				}
 			],
 		};
 	},
@@ -181,7 +203,6 @@ export default {
 	background-color: #f1efe9;
 }
 .right-panel-section-content {
-	margin-top: auto;
 	position: relative;
 	box-sizing: border-box;
 	padding: 48px;

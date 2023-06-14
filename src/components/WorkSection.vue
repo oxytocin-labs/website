@@ -1,10 +1,11 @@
 <template>
-	<div id ="portfolio" class="work-section">
+	<div id ="problem" class="work-section">
 		<div class="work-section-card">
 			<div class="work-section-text-container">
-				<div class="work-section-text-title">Latest Launches</div>
+				<div class="work-section-text-title">Problem</div>
 				<div class="work-section-text-para">
-					We're busy building beautiful digital products, brands, and experiences with contrarian founders.
+					Anyone who lives in a noisy environment may feel they have adapted to the cacophony. But <a href="https://web.archive.org/web/20230609182432/https://www.nytimes.com/interactive/2023/06/09/health/noise-exposure-health-impacts.html?smid=nytcore-ios-share&referringSource=articleShare">data</a> shows the opposite: Prior noise exposure primes the body to overreact, amplifying the negative effects.
+					It is a largely unrecognized health threat that is increasing the risk of hypertension, stroke and heart attacks worldwide, including for more than 100 million Americans.
 				</div>
 			</div>
 			<div class="right-panel">
@@ -70,51 +71,33 @@ export default {
 		cards: [
 			{
 				id: "1",
-				title: "ViveFácil",
+				title: "Traffic in Brooklyn, New York",
 				website: "https://vivefacil.com.mx/",
 				services: "UI/UX, Development",
 				timeframe: "August - September 2021",
-				content: `We leveraged our FinTech background, working close with Joe to 
-				create software for novel financial products to bring trust & liquidity to 
-				independent real estate transactions across Latin America.`,
-				img: "https://i.imgur.com/CiJAK3H.jpg",
+				content: ``,
+				img: "https://imgur.com/iGowNJm.gif",
 			},
 			{
 				id: "2",
-				title: "Multitudes",
+				title: "Plane over Bankers Hill, San Diego",
 				website: "https://app.multitudes.space/",
 				timeframe: "August - October 2021",
 				services: "UI/UX, Development, Strategy",
-				content: `We teamed up with the Multitudes founding team to create customizable
-				guided pseudonymous conversations in audio rooms where one's voice is modulated.`,
-				img: "https://i.imgur.com/CirSaZE.jpg",
+				content: ``,
+				img: "https://imgur.com/a7yKEda.gif",
 			},
 			{
 				id: "3",
-				title: "Gajo",
+				title: "Train near D’Lo, Miss.",
 				website: "",
 				timeframe: "",
 				services: "UI/UX, Development, Strategy",				
 				timeframe: "October 2021 -",
-				content: "Career exploration for GenZ - In progress",
-				img: "https://i.imgur.com/UNzjSJR.jpg",
+				content: "",
+				img: "https://imgur.com/nVhmT1z.gif",
 			},			
-			{
-				id: "4",
-				title: "Prism",
-				website: "",
-				timeframe: "",
-				services: "UI/UX, Development, Strategy",				
-				timeframe: "October 2021 -",
-				content: "AdTech content personalization - In progress",
-				img: "https://i.imgur.com/H7JmATC.jpg",
-			},
-			{
-				id: "5",
-				title: "Your Project Here",
-				content: "Contact us to know more.",
-				img: "https://icon-library.com/images/questionmark-icon/questionmark-icon-7.jpg",
-			},
+			
 		],
 	}),
 	methods: {

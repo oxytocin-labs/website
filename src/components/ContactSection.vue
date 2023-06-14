@@ -4,33 +4,30 @@
 			<div class="contact-section-text">
 			 	<!--- <p>Hello. We’ve been expecting you. Got a project? Let’s talk</p> --->
 				<p>
-					OK, let's go! First we'll have a quick chat about your idea. Our engineers will create a cost-free engineering plan of your project that you can share with your team. What's your name?
+					
 				</p>
 			</div>
 			<div class="contact-section-form">
 				<div class="contact-section-form-items">
 					<div class="contact-section-form-items-text">
-						Hi, my name is
+						
 						<div
 							contenteditable="true"
-							placeholder="name"
 							class="contact-section-form-items-text-input"
 							@blur="changeName"
 							@keypress="keypress"
 						/>
-						and my email address is
+						
 						<div
 							contenteditable="true"
-							placeholder="email"
 							class="contact-section-form-items-text-input"
 							@blur="changeEmail"
 						/>					
 					</div>
 					<div class="contact-section-form-items-text">
-						I'm working on
+						
 						<div
 							contenteditable="true"
-							placeholder="this amazing idea..."
 							class="contact-section-form-items-text-input"
 							@blur="changeProjectDescription"
 						/>
@@ -42,9 +39,9 @@
 							place-items: center;
 							margin-top: 32px;
 						"
-					>
-						<vs-button shadow size="large" @click="sendMail"
-							>Get in Touch</vs-button
+					> 
+						<vs-button shadow size="large" @click="openLink"
+							>Get on the waitlist</vs-button
 						>
 					</div>
 				</div>
@@ -73,10 +70,13 @@ export default {
 		keypress(e) {
 			if (e.which === 13) e.preventDefault();
 		},
+		openLink() {
+	      window.open("https://xztich8y3b9.typeform.com/to/fgPTg0Sp");
+		},
 		sendMail() {
-			let subject = `${this.name} <> `+`Oxytocin`;
+			let subject = `${this.name} <> `+`General Control`;
 			let body = `I'm working on ` + `${this.project_description}` + `. Let's catch up soon, tell me some times that work for you!`;
-			document.location = `mailto:rnjai.lamba@oxytocin.is?subject=${subject}&body=${body}&cc=${this.email }`;
+			document.location = `mailto:rnjailamba@gmail.com?subject=${subject}&body=${body}&cc=${this.email }`;
 		},
 	},
 };

@@ -3,15 +3,12 @@
 		<div class="landing-section-text-container">
 			<div class="landing-section-text-title">
 				<span
-					>The right applications, carefully crafted and delivered.</span
+					>Control your environment</span
 				>
 			</div>
 			<div class="landing-section-text-para">
 				<span>
-					We've consistently and meticulously munched on the most
-					complex systems within FinTech, Social, Ecommerce for
-					millions of users backed by the principles of simplicity,
-					performance, and security. (Web3 soon!)
+					Create silent zones at your work and home.
 				</span>
 				<v-btn
 					outlined
@@ -20,11 +17,11 @@
 					large
 					class="landing-section-text-btn"
 					@click="gotoAbout"
-					>Get in Touch</v-btn
+					>Get on the waitlist</v-btn
 				>
 			</div>
 			<div class="landing-section-image-container">
-				<img src="../assets/murilo-viviani-7wZxpC2oXYU-unsplash.jpg" alt="" />
+				<img src="../assets/sound.gif" alt="" />
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <template>
 	<div class="clients-section">
 		<div class="clients-section-text">
-			<div class="clients-section-text-title">Clients & Testimonials</div>
+			<div class="clients-section-text-title">Product & Technology</div>
 			<div class="clients-section-text-para">
 				
 			</div>
@@ -72,28 +72,10 @@ export default {
 		testimonials: [
 			{
 				id: "1",
-				img: "https://ca.slack-edge.com/E01LN7WTFEY-U0254AAH76U-e310ffdb8f5d-512",
-				title: "Joe Merullo, CEO, ViveFacil",
+				img: "",
+				title: "Coming Soon",
 				content: ``,
 			},
-			{
-				id: "2",
-				img: "https://ca.slack-edge.com/E01LN7WTFEY-U024T4Z30RF-8fc05e7b96db-512",
-				title: "Manny Fassihi, CEO, Multitudes",
-				content: ``,
-			},
-			{
-				id: "3",
-				img: "https://ca.slack-edge.com/E01LN7WTFEY-U02BG229QPQ-83249e434bac-512",
-				title: "Sujude Dalieh, CEO, Gajo",
-				content: ``,
-			},				
-			{
-				id: "4",
-				img: "https://ca.slack-edge.com/E01LN7WTFEY-U024T4GH27K-ee463147b3ba-512",
-				title: "Craig McDonald, EIR, Prism",
-				content: ``,
-			},		
 		],
 	}),
 	methods: {

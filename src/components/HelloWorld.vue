@@ -1,7 +1,14 @@
 <template>
 	<div class="navbar">
-		<div class="navbar-logo">
+		<!--<div class="navbar-logo">
 			<img class="navbar-logo-image" src="../assets/whitelogo.png" alt="" />
+		</div>-->
+		<div class="landing-section-text-container">
+			<div class="landing-section-text-title">
+				<span>
+				General Control
+				</span>
+			</div>
 		</div>
 		<div class="nav-actions-card-container">
 			<vs-card type="3" class="nav-actions-card">
@@ -69,23 +76,23 @@ export default {
 			buttons: [],
 			homePageButtons: [
 				{
-					label: "Portfolio",
+					label: "Problem",
+					click: () => {
+						document
+							.querySelector("#problem")
+							.scrollIntoView({ behavior: "smooth" });
+					},
+				},
+				{
+					label: "Product",
 					click: () => {
 						document
 							.querySelector("#portfolio")
 							.scrollIntoView({ behavior: "smooth" });
 					},
-				},
+				},				
 				{
-					label: "Services",
-					click: () => {
-						document
-							.querySelector("#services")
-							.scrollIntoView({ behavior: "smooth" });
-					},
-				},
-				{
-					label: "Contact",
+					label: "Facts",
 					click: () => {
 						document
 							.querySelector("#contact")
