@@ -1,5 +1,5 @@
 <template>
-	<div class="clients-section">
+	<div id ="product" class="clients-section">
 		<div class="clients-section-text">
 			<div class="clients-section-text-title">Product & Technology</div>
 			<div class="clients-section-text-para">

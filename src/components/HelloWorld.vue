@@ -87,7 +87,7 @@ export default {
 					label: "Product",
 					click: () => {
 						document
-							.querySelector("#portfolio")
+							.querySelector("#product")
 							.scrollIntoView({ behavior: "smooth" });
 					},
 				},				
@@ -95,7 +95,7 @@ export default {
 					label: "Facts",
 					click: () => {
 						document
-							.querySelector("#contact")
+							.querySelector("#facts")
 							.scrollIntoView({ behavior: "smooth" });
 					},
 				},
