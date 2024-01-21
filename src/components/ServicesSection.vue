@@ -55,7 +55,7 @@ export default {
 					title: "Health",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`Chronic noise is a largely unrecognized health threat that is increasing the risk of <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">hypertension, stroke and heart attacks</a> worldwide, including for <a href="https://web.archive.org/web/20230609182432/https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard">more than 100 million Americans.`,
+						`Chronic noise is a largely unrecognized health threat that is increasing the risk of <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">hypertension, stroke and heart attacks</a> worldwide, including for <a href="https://web.archive.org/web/20230609182432/https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard">more than 100 million Americans. The WHO <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">estimates</a> that—in western Europeans—annually 45 000 years are lost due to noise-induced cognitive impairment in children, 903 000 due to noise-induced sleep disturbance, 61 000 due to noise-induced cardiovascular disease, and 22 000 due to tinnitus.`,
 				},
 				{
 					id: "2",
