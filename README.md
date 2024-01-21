@@ -12,7 +12,7 @@ NODE_OPTIONS=--openssl-legacy-provider yarn serve
 
 ### Compiles and minifies for production
 ```
-yarn build
+NODE_OPTIONS=--openssl-legacy-provider yarn build
 ```
 
 ### Lints and fixes files
