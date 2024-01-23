@@ -62,7 +62,7 @@ export default {
 					title: "Health - Diabetes, Hypertension and Heart Attacks",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`The <a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.119.013021"> results </a> demonstrated that every 10‐dBA increase of long‐term exposure to road traffic noise was associated with an 8% increased risk of incident diabetes mellitus and a 2% increased risk of incident hypertension among individuals, aged 35 to 100 years, who resided in Toronto. Exposure to <a href="https://thewalrus.ca/noise-ethics/"> noise above 53 dB poses an 8 percent risk </a> for ischemic heart disease, and that increases by another 8 percent for each 10 dB. Prolonged <a href="https://thewalrus.ca/noise-ethics/"> proximity to anything above 85 dB will permanently damage human hearing </a>.`,
+						`The <a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.119.013021"> results </a> demonstrated that every 10 dB increase of long‐term exposure to road traffic noise was associated with an 8% increased risk of incident diabetes mellitus and a 2% increased risk of incident hypertension among individuals, aged 35 to 100 years, who resided in Toronto. Exposure to <a href="https://thewalrus.ca/noise-ethics/"> noise above 53 dB poses an 8 percent risk </a> for ischemic heart disease, and that increases by another 8 percent for each 10 dB. Prolonged <a href="https://thewalrus.ca/noise-ethics/"> proximity to anything above 85 dB will permanently damage human hearing </a>.`,
 				},	
 				{
 					id: "3",
