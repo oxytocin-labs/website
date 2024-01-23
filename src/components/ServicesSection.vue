@@ -69,7 +69,7 @@ export default {
 					title: "Discomfort",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`When <a href="https://thewalrus.ca/noise-ethics/">exposed to sounds louder than 110 dB, we experience discomfort, and anything louder than 120 dB will cause pain</a>. An average leaf blower comes at anywhere between 80 and 85 dB, and a jet engine registers about 130 dB from 100 feet away. A horn on a commercial truck can be as loud as 150 dB. About <a href="https://www.torontomu.ca/research/publications/newsletter/2021-02/health-impacts-of-noise/"> 93 per cent of people living in Toronto are exposed to constant noise levels of 45 decibels </a>, he added, but that is really the “baseline hum” of the city.`,
+						`When <a href="https://thewalrus.ca/noise-ethics/">exposed to sounds louder than 110 dB, we experience discomfort, and anything louder than 120 dB will cause pain</a>. An average leaf blower comes at anywhere between 80 and 85 dB, and a jet engine registers about 130 dB from 100 feet away. A horn on a commercial truck can be as loud as 150 dB. About <a href="https://www.torontomu.ca/research/publications/newsletter/2021-02/health-impacts-of-noise/"> 93 per cent of people living in Toronto are exposed to constant noise levels of 45 decibels </a>, which is the “baseline hum” of the city.`,
 				},					
 				{
 					id: "4",
