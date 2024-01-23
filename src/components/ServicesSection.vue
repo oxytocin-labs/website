@@ -62,10 +62,17 @@ export default {
 					title: "Health - Diabetes, Hypertension and Heart Attacks",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`The <a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.119.013021"> results </a> demonstrated that every 10‐dBA increase of long‐term exposure to road traffic noise was associated with an 8% increased risk of incident diabetes mellitus and a 2% increased risk of incident hypertension among individuals, aged 35 to 100 years, who resided in Toronto. Exposure to <a href="https://thewalrus.ca/noise-ethics/"> noise above 53 dB poses an 8 percent risk </a> for ischemic heart disease, and that increases by another 8 percent for each 10 dB. Prolonged <a href="https://thewalrus.ca/noise-ethics/"> proximity to anything above 85 dB will permanently damage human hearing </a>. When exposed to sounds louder than 110 dB, we experience discomfort, and anything louder than 120 dB will cause pain. An average leaf blower comes at anywhere between 80 and 85 dB, and a jet engine registers about 130 dB from 100 feet away. A horn on a commercial truck can be as loud as 150 dB. About <a href="https://www.torontomu.ca/research/publications/newsletter/2021-02/health-impacts-of-noise/"> 93 per cent of people living in Toronto are exposed to constant noise levels of 45 decibels </a>, he added, but that is really the “baseline hum” of the city.`,
+						`The <a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.119.013021"> results </a> demonstrated that every 10‐dBA increase of long‐term exposure to road traffic noise was associated with an 8% increased risk of incident diabetes mellitus and a 2% increased risk of incident hypertension among individuals, aged 35 to 100 years, who resided in Toronto. Exposure to <a href="https://thewalrus.ca/noise-ethics/"> noise above 53 dB poses an 8 percent risk </a> for ischemic heart disease, and that increases by another 8 percent for each 10 dB. Prolonged <a href="https://thewalrus.ca/noise-ethics/"> proximity to anything above 85 dB will permanently damage human hearing </a>.`,
 				},	
 				{
 					id: "3",
+					title: "Discomfort",
+					img: "https://imgur.com/vPylBfb.png",					
+					content:
+						`When <a href="https://thewalrus.ca/noise-ethics/">exposed to sounds louder than 110 dB, we experience discomfort, and anything louder than 120 dB will cause pain</a>. An average leaf blower comes at anywhere between 80 and 85 dB, and a jet engine registers about 130 dB from 100 feet away. A horn on a commercial truck can be as loud as 150 dB. About <a href="https://www.torontomu.ca/research/publications/newsletter/2021-02/health-impacts-of-noise/"> 93 per cent of people living in Toronto are exposed to constant noise levels of 45 decibels </a>, he added, but that is really the “baseline hum” of the city.`,
+				},					
+				{
+					id: "4",
 					title: "Sleep",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
@@ -74,28 +81,28 @@ export default {
 						Nearly a third of the U.S. population lives in areas exposed to noise levels of at least 45 dB, according to a preliminary analysis based on models of road, rail and aircraft noise in 2020 from the Department of Transportation.`,
 				},							
 				{
-					id: "4",
+					id: "5",
 					title: "Productivity",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
 						`Noise is a remarkably insidious form of pollution: a <a href="https://joshuatdean.com/wp-content/uploads/2020/02/NoiseCognitiveFunctionandWorkerProductivity.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5% </a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
 				},
 				{
-					id: "5",
+					id: "6",
 					title: "Creativity",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
 						`Background music makes you worse at creative tasks with memory or verbal elements in <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/acp.3532">3 experiments</a>. No difference if the music was instrumental, foreign language, or a particular genre. Silence or low-level noise was best. `,
 				},
 				{
-					id: "6",
+					id: "7",
 					title: "Economics",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
 						`Economists who analyzed health care spending and productivity loss because of heart disease and hypertension have argued that a 5 dB reduction in U.S. noise could result in an <a href="https://web.archive.org/web/20230609182432/https://pubmed.ncbi.nlm.nih.gov/26024562/">annual benefit of $3.9 billion</a>`,
 				},
 				{
-					id: "7",
+					id: "8",
 					title: "Progressive Risk",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
