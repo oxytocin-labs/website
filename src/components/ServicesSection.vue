@@ -85,7 +85,7 @@ export default {
 					title: "Productivity",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`Noise is a remarkably insidious form of pollution: a <a href="https://joshuatdean.com/wp-content/uploads/2020/02/NoiseCognitiveFunctionandWorkerProductivity.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5% </a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
+						`Noise is a remarkably insidious form of pollution: a <a href="https://joshuatdean.com/wp-content/uploads/2020/02/NoiseCognitiveFunctionandWorkerProductivity.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5%</a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
 				},
 				{
 					id: "6",
