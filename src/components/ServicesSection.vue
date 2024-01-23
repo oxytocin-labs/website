@@ -55,14 +55,14 @@ export default {
 					title: "Health",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`Chronic noise is a largely unrecognized health threat that is increasing the risk of <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">hypertension, stroke and heart attacks</a> worldwide, including for <a href="https://web.archive.org/web/20230609182432/https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard">more than 100 million Americans. The WHO <a href="https://web.archive.org/web/20230609182432/https://academic.oup.com/eurheartj/article/35/13/829/634015">estimates</a> that—in western Europeans—annually 45 000 years are lost due to noise-induced cognitive impairment in children, 903 000 due to noise-induced sleep disturbance, 61 000 due to noise-induced cardiovascular disease, and 22 000 due to tinnitus.`,
+						`Chronic noise is a largely unrecognized health threat that is increasing the risk of <a href="https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard">hypertension, stroke and heart attacks</a> worldwide, including for <a href="https://apha.org/Policies-and-Advocacy/Public-Health-Policy-Statements/Policy-Database/2022/01/07/Noise-as-a-Public-Health-Hazard"> 145 million Americans. The WHO <a href="https://academic.oup.com/eurheartj/article/35/13/829/634015?login=false">estimates</a> that—in western Europeans—annually 45 000 years are lost due to noise-induced cognitive impairment in children, 903 000 due to noise-induced sleep disturbance, 61 000 due to noise-induced cardiovascular disease, and 22 000 due to tinnitus.`,
 				},
 				{
 					id: "2",
 					title: "Productivity",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`Noise is a remarkably insidious form of pollution: a <a href="https://pub.dega-akustik.de/ICA2019/data/articles/000062.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5% </a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
+						`Noise is a remarkably insidious form of pollution: a <a href="https://joshuatdean.com/wp-content/uploads/2020/02/NoiseCognitiveFunctionandWorkerProductivity.pdf">10dB noise increase (from dishwasher to vacuum) drops productivity by 5% </a>. But we don't notice: noise hurts your ability to think, not your effort. You work as hard but do worse. And poorer areas have more noise.`,
 				},
 				{
 					id: "3",
