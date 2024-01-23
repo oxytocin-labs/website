@@ -78,7 +78,9 @@ export default {
 					content:
 						`The W.H.O. has long recommended <a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">less than </a><a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">40 dB</a> as an annual average of nighttime noise outside bedrooms to prevent negative health effects, and <a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise">less than</a><a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise"> 30 dB</a> of nighttime noise inside bedrooms for high-quality sleep. 
 
-						Nearly a third of the U.S. population lives in areas exposed to noise levels of at least 45 dB, according to a preliminary analysis based on models of road, rail and aircraft noise in 2020 from the Department of Transportation.`,
+						According to the World Health Organization, average road <a href="https://www.who.int/europe/publications/i/item/9789289053563">traffic noise above 53 dB or average aircraft noise exposure above about 45 dB are associated with adverse health effects</a>. 
+
+						Nearly a <a href="https://www.nytimes.com/interactive/2023/06/09/health/noise-exposure-health-impacts.html?smid=nytcore-ios-share&referringSource=articleShare">third of the U.S. population lives in areas exposed to noise levels of at least 45 dB</a>, according to a preliminary analysis based on models of road, rail and aircraft noise in 2020 from the Department of Transportation.`,
 				},							
 				{
 					id: "5",
