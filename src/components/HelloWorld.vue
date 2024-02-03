@@ -6,7 +6,7 @@
 		<div class="landing-section-text-container">
 			<div class="landing-section-text-title">
 				<span>
-				General Control
+				Spatial Noise Control
 				</span>
 			</div>
 		</div>

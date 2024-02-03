@@ -85,7 +85,7 @@ export default {
 					title: "Sleep",
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
-						`The W.H.O. has long recommended <a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">less than </a><a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">40 dB</a> as an annual average of nighttime noise outside bedrooms to prevent negative health effects, and <a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise">less than 30 dB</a> of nighttime noise inside bedrooms for high-quality sleep. 
+						`The W.H.O. has long recommended <a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf?sequence=1&amp;isAllowed=y">less than </a><a href="https://web.archive.org/web/20230609182432/https://apps.who.int/iris/bitstream/handle/10665/326486/9789289041737-eng.pdf">40 dB</a> as an annual average of nighttime noise outside bedrooms to prevent negative health effects, and <a href="https://web.archive.org/web/20230609182432/https://www.who.int/europe/news-room/fact-sheets/item/noise">less than 30 dB</a> of nighttime noise inside bedrooms for high-quality sleep. 
 
 						According to the World Health Organization, average road <a href="https://www.who.int/europe/publications/i/item/9789289053563">traffic noise above 53 dB or average aircraft noise exposure above about 45 dB are associated with adverse health effects</a>. 
 
