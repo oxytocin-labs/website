@@ -74,7 +74,7 @@ export default {
 	      window.open("https://xztich8y3b9.typeform.com/to/fgPTg0Sp");
 		},
 		sendMail() {
-			let subject = `${this.name} <> `+`General Control`;
+			let subject = `${this.name} <> `+`Spatial Noise Control`;
 			let body = `I'm working on ` + `${this.project_description}` + `. Let's catch up soon, tell me some times that work for you!`;
 			document.location = `mailto:rnjailamba@gmail.com?subject=${subject}&body=${body}&cc=${this.email }`;
 		},

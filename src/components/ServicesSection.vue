@@ -111,7 +111,14 @@ export default {
 					img: "https://imgur.com/vPylBfb.png",					
 					content:
 						`Economists who analyzed health care spending and productivity loss because of heart disease and hypertension have argued that a 5 dB reduction in U.S. noise could result in an <a href="https://web.archive.org/web/20230609182432/https://pubmed.ncbi.nlm.nih.gov/26024562/">annual benefit of $3.9 billion</a>`,
-				}
+				},
+				{
+					id: "9",
+					title: "Futility Of Current Solutions",
+					img: "https://imgur.com/vPylBfb.png",					
+					content:
+						`Noise cancelling <a href="https://x.com/emollick/status/1688313658307133440?s=20"> headphones are apparently a futile solution to office noise</a>. They mostly delude us into thinking they help. This <a href="Influence of active-noise-cancelling headphones on cognitive performance and employee satisfaction in open space offices from https://pub.dega-akustik.de/ICA2019/data/articles/000062.pdf">study</a> finds we feel they improve our ability to concentrate, but found no significant improvements in actual concentration.`,
+				},				
 			],
 		};
 	},
