@@ -72,9 +72,15 @@ export default {
 		testimonials: [
 			{
 				id: "1",
-				img: "",
-				title: "Coming Soon",
-				content: ``,
+				img: "https://assets-global.website-files.com/5b2c8a9fa49e8e2d4604e60b/5fa48d13b8c60ae86d3f6f1f_Image.png",
+				title: "SNC Headphone",
+				content: `Headphone equipped with patent-pending technology. Sign up for the waitlist to get informed when we start shipping.`,
+			},
+			{
+				id: "2",
+				img: "https://imgur.com/jgNRLBw.gif",
+				title: "Technology",
+				content: `SNC Headphones automatically learn about your environment and adapt to deliver a revolutionary experience.`,
 			},
 		],
 	}),

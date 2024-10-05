@@ -1,8 +1,27 @@
 <template>
+	<div id="landing" class="landing-section-container">
+		<div class="landing-section-text-container">
+			<div class="landing-section-text-title">
+				<span
+					>About us</span
+				>
+			</div>
+			<div class="landing-section-text-para">
+
+			</div>
+			<div class="landing-section-image-container">
+				<img src="../assets/team.png" alt="" />
+			</div>
+		</div>
+	</div>
+<!-- 
+
 	<div class="about">
 		<div class="about-content">
 			<v-card elevation="12" class="about-card">
+
 				<v-card-title>About us</v-card-title>
+
 				<v-card-text-large>
 			 
 				</v-card-text-large>
@@ -11,6 +30,7 @@
 			</v-card>
 		</div>
 	</div>
+	 -->	
 </template>
 
 <style scoped>
